@@ -201,7 +201,7 @@ const Contact = () => {
             </p>
           </div>
 
-    <div className="mt-8">
+    <div className="mt-8 z-30">
     <Map center={[51.3566, 0.3082]}>
     <MapTileLayer />
     <MapZoomControl />

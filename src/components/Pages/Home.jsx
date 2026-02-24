@@ -1,4 +1,6 @@
 import AboutUs from "../AboutUs/AboutUs"
+import Action from "../AboutUs/Action"
+import ChooseUs from "../AboutUs/ChooseUs"
 import Awards from "../Awards/Awards"
 import Banner from "../Banner/Banner"
 import ShortFAQ from "../FAQ/ShortFAQ"
@@ -16,9 +18,11 @@ const Home = () => {
         <Navbar />
         <Hero />
         <AboutUs />
+        <ChooseUs />
         <Services />
         <Awards />
         <Reviews />
+        <Action />
         <ShortFAQ />
         <Footer />
         </>
