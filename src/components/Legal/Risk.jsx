@@ -176,20 +176,28 @@ const TermsPage = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <Navbar />
-            {/* Hero */}
-            <div className="bg-white border-b border-gray-100 px-8 py-16">
-                <div className="max-w-5xl mx-auto flex flex-col gap-4">
-                    <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-pink-400" />
+
+            <div className="relative bg-gradient-to-br from-pink-500 to-pink-600 overflow-hidden">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-pink-400/30 rounded-full -translate-y-1/2 translate-x-1/3" />
+                <div className="absolute bottom-0 left-10 w-48 h-48 bg-pink-400/20 rounded-full translate-y-1/2" />
+                {/* Yellow accent blob */}
+                <div className="absolute top-8 right-1/3 w-20 h-20 bg-pink-300/30 rounded-full" />
+
+                <div className="relative max-w-5xl mx-auto px-8 py-20 flex flex-col gap-6">
+                    <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center gap-2 text-white font-bold text-sm tracking-widest uppercase">
+                        <span className="w-6 h-px bg-white" />
                         Legal
                     </span>
-                    <h1 className="text-5xl font-extrabold text-gray-900 tracking-tight">
-                        Terms & <span className="text-pink-500">Conditions</span>
+                    </div>
+                    <h1 className="text-6xl font-extrabold text-white tracking-tight leading-none">
+                        Terms & <br />
+                        <span className="text-pink-300">Conditions.</span>
                     </h1>
-                    <p className="text-gray-400 text-base max-w-2xl leading-relaxed">
-                        Please read these terms carefully before making a booking. By confirming a hire with us, you agree to be bound by the following conditions in full.
+                    <p className="text-pink-100 text-lg max-w-xl leading-relaxed">
+                    Please read these terms carefully before making a booking. By confirming a hire with us, you agree to be bound by the following conditions in full.
                     </p>
-                    <p className="text-xs text-gray-300">Last updated: January 2025 · Bouncy Castle Hire, Surrey, UK</p>
+                <p className="text-xs text-gray-300">Last updated: January 2025 · Bouncy Castle Hire, Surrey, UK</p>
                 </div>
             </div>
 

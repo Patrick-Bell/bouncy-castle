@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import { Balloon, Bolt, Calendar, Castle, CloudLightning, DollarSign, Folder, Mail, MessageCircleIcon, Phone, Rainbow, Shield, Van, X } from "lucide-react";
 
 const categories = [
     {
         id: "booking",
-        icon: "📅",
+        icon: <Calendar className="w-5 h-5" />,
         label: "Booking",
         questions: [
             { q: "How do I make a booking?", a: "Easy! You can book via our website enquiry form, by calling us on 07700 900 123, or by dropping us an email at hello@bouncycastle.co.uk. Once we confirm availability we'll send over a booking confirmation and deposit details. Simple as that! 🎉" },
@@ -20,7 +21,7 @@ const categories = [
     },
     {
         id: "delivery",
-        icon: "🚚",
+        icon: <Van className="w-5 h-5"  />,
         label: "Delivery & Setup",
         questions: [
             { q: "What area do you cover?", a: "We cover Surrey and South London — think Guildford, Woking, Kingston, Wimbledon, Croydon, Sutton, Epsom, Reigate, and everywhere in between. Not sure if we reach you? Give us a shout and we'll check!" },
@@ -36,7 +37,7 @@ const categories = [
     },
     {
         id: "safety",
-        icon: "🛡️",
+        icon: <Shield className="w-5 h-5"  />,
         label: "Safety",
         questions: [
             { q: "Are your castles safe?", a: "100%! Every single one of our castles is PIPA certified — that's the UK's gold standard for inflatable safety. They're inspected before and after every single hire. We genuinely wouldn't put a child on anything we weren't totally confident in." },
@@ -51,7 +52,7 @@ const categories = [
     },
     {
         id: "weather",
-        icon: "🌤️",
+        icon: <Rainbow />,
         label: "Weather",
         questions: [
             { q: "What if it rains?", a: "A bit of rain? No problem — most of our castles have a rain cover for light showers. Heavy rain is a different story though (slippery surface = not safe), and we'd ask you to deflate in a downpour. Storms and lightning? Castle comes down, full stop." },
@@ -63,7 +64,7 @@ const categories = [
     },
     {
         id: "castles",
-        icon: "🏰",
+        icon: <Castle />,
         label: "The Castles",
         questions: [
             { q: "How do I pick the right castle?", a: "Check out our Castles page for all the details — each listing shows dimensions, age ranges, and capacity. Still unsure? Give us a call! We love helping people pick the perfect one and we know our fleet inside out." },
@@ -75,7 +76,7 @@ const categories = [
     },
     {
         id: "events",
-        icon: "🎉",
+        icon: <Balloon />,
         label: "Events",
         questions: [
             { q: "What types of events do you do?", a: "Birthday parties, garden parties, school fairs, church fetes, nursery events, community days, charity fundraisers, corporate family days — you name it, we've probably done it. If you're throwing an event with kids, we want to be there!" },
@@ -87,7 +88,7 @@ const categories = [
     },
     {
         id: "pricing",
-        icon: "💷",
+        icon: <DollarSign />,
         label: "Pricing",
         questions: [
             { q: "How much does it cost?", a: "Prices depend on which castle, how long, and where you are. Head to our Castles page for indicative pricing or drop us a message for a tailored quote. We'll always be upfront — what you see is what you pay." },
@@ -99,7 +100,7 @@ const categories = [
     },
     {
         id: "cancellation",
-        icon: "❌",
+        icon: <X />,
         label: "Cancellations",
         questions: [
             { q: "What's your cancellation policy?", a: "More than 14 days out — full deposit refund. 7–14 days — deposit kept. Under 7 days — up to 50% of the total fee. Under 48 hours — full fee may apply. Life happens though, so if it's a genuine emergency just give us a call and we'll always try to be human about it." },
@@ -149,16 +150,18 @@ const FAQPage = () => {
                 <div className="absolute top-0 right-0 w-80 h-80 bg-pink-400/30 rounded-full -translate-y-1/2 translate-x-1/3" />
                 <div className="absolute bottom-0 left-10 w-48 h-48 bg-pink-400/20 rounded-full translate-y-1/2" />
                 {/* Yellow accent blob */}
-                <div className="absolute top-8 right-1/3 w-20 h-20 bg-yellow-300/30 rounded-full" />
+                <div className="absolute top-8 right-1/3 w-20 h-20 bg-pink-300/30 rounded-full" />
 
                 <div className="relative max-w-5xl mx-auto px-8 py-20 flex flex-col gap-6">
                     <div className="flex items-center gap-3">
-                        <span className="text-4xl animate-bounce">🏰</span>
-                        <span className="text-pink-200 font-bold text-sm tracking-widest uppercase">Got questions?</span>
+                        <span className="inline-flex items-center gap-2 text-white font-bold text-sm tracking-widest uppercase">
+                        <span className="w-6 h-px bg-white" />
+                        Questions?
+                    </span>                    
                     </div>
                     <h1 className="text-6xl font-extrabold text-white tracking-tight leading-none">
                         We've got<br />
-                        <span className="text-yellow-300">all the answers.</span>
+                        <span className="text-pink-300">all the answers.</span>
                     </h1>
                     <p className="text-pink-100 text-lg max-w-xl leading-relaxed">
                         From "how do I book?" to "what if it rains?" — we've answered everything we get asked. And if we haven't, just give us a ring!
@@ -167,24 +170,24 @@ const FAQPage = () => {
                     {/* Stats */}
                     <div className="flex flex-wrap gap-3 mt-2">
                         <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-2xl px-5 py-3 flex items-center gap-2">
-                            <span className="text-2xl">💬</span>
+                            <span className="text-2xl"><MessageCircleIcon className="text-white" /></span>
                             <div>
                                 <p className="text-white font-extrabold text-lg leading-none">{totalQuestions}</p>
                                 <p className="text-pink-200 text-xs">questions answered</p>
                             </div>
                         </div>
                         <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-2xl px-5 py-3 flex items-center gap-2">
-                            <span className="text-2xl">📂</span>
+                            <span className="text-2xl"><Folder className="text-white" /></span>
                             <div>
                                 <p className="text-white font-extrabold text-lg leading-none">{categories.length}</p>
                                 <p className="text-pink-200 text-xs">categories</p>
                             </div>
                         </div>
-                        <div className="bg-yellow-300/20 border border-yellow-300/30 rounded-2xl px-5 py-3 flex items-center gap-2">
-                            <span className="text-2xl">⚡</span>
+                        <div className="bg-pink-300/20 border border-pink-300/30 rounded-2xl px-5 py-3 flex items-center gap-2">
+                            <span className="text-2xl"><Bolt className="text-white" /></span>
                             <div>
-                                <p className="text-yellow-300 font-extrabold text-lg leading-none">Fast</p>
-                                <p className="text-yellow-200 text-xs">reply guaranteed</p>
+                                <p className="text-pink-300 font-extrabold text-lg leading-none">Fast</p>
+                                <p className="text-pink-200 text-xs">reply guaranteed</p>
                             </div>
                         </div>
                     </div>
@@ -226,11 +229,11 @@ const FAQPage = () => {
                             <div key={cat.id} id={`faq-${cat.id}`} className="flex flex-col gap-3 scroll-mt-20">
 
                                 {/* Category header — alternates between pink and yellow accent */}
-                                <div className={`rounded-2xl px-6 py-5 flex items-center gap-4 mb-2 ${catIndex % 2 === 0 ? "bg-pink-500" : "bg-yellow-400"}`}>
-                                    <span className="text-3xl">{cat.icon}</span>
+                                <div className={`rounded-2xl px-6 py-5 flex items-center gap-4 mb-2 bg-pink-500`}>
+                                    <span className="bg-pink-300 p-3 rounded-xl text-white">{cat.icon}</span>
                                     <div>
-                                        <h2 className={`font-extrabold text-xl ${catIndex % 2 === 0 ? "text-white" : "text-gray-900"}`}>{cat.label}</h2>
-                                        <p className={`text-xs ${catIndex % 2 === 0 ? "text-pink-200" : "text-yellow-700"}`}>{cat.questions.length} questions</p>
+                                        <h2 className={`font-extrabold text-xl text-white`}>{cat.label}</h2>
+                                        <p className={`text-xs text-pink-200`}>{cat.questions.length} questions</p>
                                     </div>
                                 </div>
 
@@ -312,8 +315,8 @@ const FAQPage = () => {
 
                         <div className="mt-5 pt-4 border-t border-gray-100 flex flex-col gap-2 px-2">
                             <p className="text-xs font-bold text-gray-400">Need more help?</p>
-                            <a href="tel:07700900123" className="text-xs font-extrabold text-pink-500 hover:text-pink-600 transition-colors">📞 07700 900 123</a>
-                            <a href="mailto:hello@bouncycastle.co.uk" className="text-xs font-bold text-gray-400 hover:text-pink-500 transition-colors break-all">✉️ hello@bouncycastle.co.uk</a>
+                            <a href="tel:07700900123" className="text-xs font-extrabold text-pink-500 hover:text-pink-600 transition-colors flex items-center gap-1"><Phone className="w-4 h-4" /> 07700 900 123</a>
+                            <a href="mailto:hello@bouncycastle.co.uk" className="text-xs font-bold text-gray-400 hover:text-pink-500 transition-colors break-all flex items-center gap-1"><Mail className="w-4 h-4" /> hello@bouncycastle.co.uk</a>
                         </div>
                     </aside>
                 </div>
