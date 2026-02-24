@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import ImageGallery from "./ImageGallery";
 import { Highlighter } from "../ui/highlighter";
 import { emailBooking } from "../../api/EmailBooking";
+import CastleNotFound from "./CastleNotFound";
 
 
 const DynamicProductPage = () => {
@@ -45,7 +46,7 @@ const DynamicProductPage = () => {
     const castle = castles.find((castle) => castle.id === Number(id))
 
     if (!castle) {
-        return <div className="p-10 text-center">Product not found.</div>;
+        return <CastleNotFound />;
       }
 
     // Parse base price for overnight calc (strip "From £" etc.)
@@ -127,9 +128,11 @@ const DynamicProductPage = () => {
                       <span className="text-3xl font-extrabold text-gray-900">
                         <Highlighter animationDuration={3000} isView iterations={8} action="underline" color="#EC4899">{basePrice}</Highlighter>
                         </span>
+                        <div>
                       {overnight && (
-                        <span className="text-sm font-bold text-pink-400">+ £30 overnight</span>
+                        <span className="text-sm font-bold text-pink-400">+ £30</span>
                       )}
+                      </div>
                     </div>
                   </div>
                   <span className="text-xs text-gray-400 font-medium text-right leading-relaxed">Includes delivery,<br/>setup & collection</span>

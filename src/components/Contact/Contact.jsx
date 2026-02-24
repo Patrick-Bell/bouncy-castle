@@ -65,7 +65,7 @@ const Contact = () => {
                   href="https://wa.me/447700000000"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-100 hover:border-green-300 hover:bg-green-50 transition-all group"
+                  className="flex items-center gap-4 p-4 rounded-2xl border border-gray-100 hover:border-green-300 hover:bg-green-50 transition-all group"
                 >
                   <div className="w-11 h-11 rounded-xl bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors">
                     <MessageCircle className="w-5 h-5 text-green-600" />
@@ -80,7 +80,7 @@ const Contact = () => {
                 {/* Phone */}
                 <a
                   href="tel:+447700000000"
-                  className="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-100 hover:border-pink-300 hover:bg-pink-50 transition-all group"
+                  className="flex items-center gap-4 p-4 rounded-2xl border border-gray-100 hover:border-pink-300 hover:bg-pink-50 transition-all group"
                 >
                   <div className="w-11 h-11 rounded-xl bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:bg-pink-200 transition-colors">
                     <Phone className="w-5 h-5 text-pink-500" />
@@ -94,7 +94,7 @@ const Contact = () => {
                 {/* Email */}
                 <a
                   href="mailto:hello@yourcastle.co.uk"
-                  className="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-100 hover:border-blue-300 hover:bg-blue-50 transition-all group"
+                  className="flex items-center gap-4 p-4 rounded-2xl border border-gray-100 hover:border-blue-300 hover:bg-blue-50 transition-all group"
                 >
                   <div className="w-11 h-11 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
                     <Mail className="w-5 h-5 text-blue-500" />
@@ -110,7 +110,7 @@ const Contact = () => {
                   href="https://instagram.com/yourhandle"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-100 hover:border-fuchsia-300 hover:bg-fuchsia-50 transition-all group"
+                  className="flex items-center gap-4 p-4 rounded-2xl border border-gray-100 hover:border-fuchsia-300 hover:bg-fuchsia-50 transition-all group"
                 >
                   <div className="w-11 h-11 rounded-xl bg-fuchsia-100 flex items-center justify-center flex-shrink-0 group-hover:bg-fuchsia-200 transition-colors">
                     <Instagram className="w-5 h-5 text-fuchsia-500" />
