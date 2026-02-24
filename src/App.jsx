@@ -8,6 +8,7 @@ import SpeedDial from './components/SpeedDial/SpeedDial'
 import Products from './components/Catalogue/Products'
 import DynamicProductPage from './components/Catalogue/DynamicProductPage'
 import Contact from './components/Contact/Contact'
+import NotFound from './components/404/NotFound'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path='/bouncy-castles' element={<Products />} />
       <Route path='/bouncy-castle/:id' element={<DynamicProductPage />} />
       <Route path='/contact' element={<Contact />} />
+      <Route path='/not-found' element={<NotFound />} />
       </Routes>
 
       <SpeedDial />
