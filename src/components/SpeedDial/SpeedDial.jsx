@@ -46,7 +46,7 @@ const SpeedDial = () => {
             {/* Trigger button */}
             <div
                 onClick={() => setOpen((prev) => !prev)}
-                className="bg-pink-500 hover:bg-pink-600 cursor-pointer fixed bottom-2 right-2 p-3 rounded-lg text-white z-20"
+                className="bg-pink-500 hover:bg-pink-600 cursor-pointer fixed bottom-2 right-2 p-3 rounded-lg text-white z-60"
             >
                 <Plus className={`${open ? 'rotate-45 transition ease-in-out' : 'rotate-180 transition'}`} />
             </div>
