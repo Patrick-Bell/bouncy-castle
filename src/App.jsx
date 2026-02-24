@@ -23,7 +23,7 @@ function App() {
       <Route path='/bouncy-castles' element={<Products />} />
       <Route path='/bouncy-castle/:id' element={<DynamicProductPage />} />
       <Route path='/contact' element={<Contact />} />
-      <Route path='/not-found' element={<NotFound />} />
+      <Route path='*' element={<NotFound />} />
       </Routes>
 
       <SpeedDial />
