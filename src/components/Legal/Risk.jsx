@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import { File } from "lucide-react";
 
 const clauses = [
     {
@@ -210,7 +211,7 @@ const TermsPage = () => {
 
                         {/* Summary box */}
                         <div className="bg-pink-50 border border-pink-100 rounded-2xl p-6 flex gap-4">
-                            <span className="text-2xl flex-shrink-0">📋</span>
+                            <span className="text-2xl flex-shrink-0"><File className="text-pink-500" /></span>
                             <div>
                                 <p className="font-bold text-pink-800 text-sm mb-1">The Short Version</p>
                                 <p className="text-pink-700 text-sm leading-relaxed">

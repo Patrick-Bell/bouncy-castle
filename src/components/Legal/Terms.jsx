@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import { AlertCircle, AlertTriangle, Download, Eye, File, LocateIcon, Search } from "lucide-react";
+import { MdEmergency } from "react-icons/md";
 
 const sections = [
     {
         id: "overview",
-        icon: "📋",
+        icon: <File className="text-pink-500" />,
         title: "Overview & Responsibility",
         items: [
             "This risk assessment covers the hire, delivery, setup, supervised use, and collection of inflatable play equipment operated by Bouncy Castle Hire.",
@@ -18,7 +20,7 @@ const sections = [
     },
     {
         id: "hazards",
-        icon: "⚠️",
+        icon: <AlertCircle className="text-pink-500" />,
         title: "Identified Hazards & Controls",
         risks: [
             {
@@ -126,7 +128,7 @@ const sections = [
     },
     {
         id: "equipment",
-        icon: "🔍",
+        icon: <Search className="text-pink-500" />,
         title: "Equipment Inspection & Maintenance",
         items: [
             "All inflatable units are PIPA (Publicly Inflatable Products Association) tested and certified annually by an approved inspector. PIPA tags are affixed to each unit.",
@@ -141,7 +143,7 @@ const sections = [
     },
     {
         id: "emergency",
-        icon: "🚑",
+        icon: <MdEmergency className="text-pink-500" />,
         title: "Emergency Procedures",
         items: [
             "In the event of serious injury: call 999 immediately, do not move the injured person unless they are in immediate danger, administer first aid if trained to do so, and contact us on 07700 900 123.",
@@ -155,7 +157,7 @@ const sections = [
     },
     {
         id: "supervision",
-        icon: "👁️",
+        icon: <Eye className="text-pink-500"/>,
         title: "Supervision Requirements",
         items: [
             "A competent adult supervisor aged 18 or over must be actively present and watching the castle at all times during use. This is a non-negotiable requirement.",
@@ -170,7 +172,7 @@ const sections = [
     },
     {
         id: "site",
-        icon: "📍",
+        icon: <LocateIcon className="text-pink-500" />,
         title: "Site Requirements & Assessment",
         items: [
             "Our team conducts a site assessment at the point of setup. If the site is found to be unsuitable, we reserve the right to refuse setup.",
@@ -282,7 +284,7 @@ const RiskAssessmentPage = () => {
                     As a family business, safety is our absolute priority. This document outlines all identified risks, our control measures, and our certifications. Available for download below.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-1">
-                        {["✅ PIPA Certified", "🛡️ £5M Public Liability", "⚡ PAT Tested", "📋 Annually Reviewed"].map((b, i) => (
+                        {["PIPA Certified", "£5M Public Liability", "PAT Tested", "Annually Reviewed"].map((b, i) => (
                             <span key={i} className="bg-pink-50 border border-pink-100 text-pink-700 text-xs font-bold px-3 py-1.5 rounded-full">{b}</span>
                         ))}
                     </div>
@@ -298,7 +300,7 @@ const RiskAssessmentPage = () => {
 
                         {/* Warning box */}
                         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 flex gap-4">
-                            <span className="text-2xl flex-shrink-0">⚠️</span>
+                            <span className="text-2xl flex-shrink-0"><AlertTriangle className="text-amber-500" /></span>
                             <div>
                                 <p className="font-bold text-amber-800 text-sm mb-1">Important Notice</p>
                                 <p className="text-amber-700 text-sm leading-relaxed">
@@ -342,7 +344,7 @@ const RiskAssessmentPage = () => {
                                                 className="inline-flex items-center gap-1.5 bg-white text-gray-700 text-xs font-bold px-3 py-1.5 rounded-lg hover:bg-gray-50 border border-gray-200 transition-colors"
                                                 title="PDF not yet uploaded — replace href with actual file path"
                                             >
-                                                ⬇️ Download PDF
+                                                <Download className="w-5 h-4" /> Download PDF
                                             </a>
                                         </div>
                                     </div>
@@ -361,7 +363,7 @@ const RiskAssessmentPage = () => {
                                     className="flex-shrink-0 inline-flex items-center gap-2 bg-pink-500 text-white font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-pink-600 transition-colors"
                                     title="Replace href with path to your PDF"
                                 >
-                                    ⬇️ Full Risk Assessment PDF
+                                    <Download className="w-5 h-4" /> Full Risk Assessment PDF
                                 </a>
                             </div>
                         </div>
@@ -473,7 +475,7 @@ const RiskAssessmentPage = () => {
                                 onClick={(e) => e.preventDefault()}
                                 className="w-full flex items-center justify-center gap-1.5 bg-pink-500 text-white font-bold text-xs px-3 py-2.5 rounded-xl hover:bg-pink-600 transition-colors"
                             >
-                                ⬇️ Download PDF
+                                <Download className="w-5 h-4" /> Download PDF
                             </a>
                         </div>
                     </aside>
