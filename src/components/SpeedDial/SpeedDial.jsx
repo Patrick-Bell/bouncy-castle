@@ -31,12 +31,12 @@ const SpeedDial = () => {
                                     pointerEvents: open ? 'auto' : 'none',
                                     transition: `bottom 0.3s ease ${index * 0.05}s, opacity 0.2s ease ${index * 0.05}s`,
                                 }}
-                                className="bg-pink-500 hover:bg-pink-600 cursor-pointer fixed p-3 rounded-lg text-white z-20"
+                                className="bg-pink-500 hover:bg-pink-600 cursor-pointer fixed p-3 rounded-lg text-white z-60"
                             >
                                 {action.icon}
                             </div>
                         </TooltipTrigger>
-                        <TooltipContent side="left" className="z-30">
+                        <TooltipContent side="left" className="z-60">
                             <p className="text-xs">{action.label}</p>
                         </TooltipContent>
                     </Tooltip>
