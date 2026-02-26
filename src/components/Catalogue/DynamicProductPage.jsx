@@ -8,6 +8,7 @@ import ImageGallery from "./ImageGallery";
 import { Highlighter } from "../ui/highlighter";
 import { emailBooking } from "../../api/EmailBooking";
 import CastleNotFound from "./CastleNotFound";
+import WeatherModal from "./WeatherModal";
 
 
 const DynamicProductPage = () => {
@@ -267,6 +268,7 @@ const DynamicProductPage = () => {
                   <h3 className="font-extrabold text-gray-900 text-base mb-1">Ready to Book?</h3>
                   <p className="text-sm text-gray-400">
                     All bookings are handled directly — just reach out via any of the options below and we'll sort everything for you.
+                    <span> You can also check the weather <WeatherModal /></span>
                   </p>
                 </div>
 
@@ -447,7 +449,6 @@ const DynamicProductPage = () => {
       </section>
 
 
-    <Footer />
      </>
     )
 }

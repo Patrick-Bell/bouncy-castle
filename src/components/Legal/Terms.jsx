@@ -482,7 +482,6 @@ const RiskAssessmentPage = () => {
 
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

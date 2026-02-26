@@ -124,11 +124,11 @@ const Footer = () => {
                         <p className="text-xs">Back to top</p>
                     </div>
                     <div className="flex items-center gap-4">
-                        <a href="/terms" className="text-gray-600 text-xs hover:text-gray-400 transition-colors">Terms & Conditions</a>
+                        <a href="/terms-and-conditions" className="text-gray-600 text-xs hover:text-gray-400 transition-colors">Terms & Conditions</a>
                         <span className="text-gray-700">·</span>
-                        <a href="/privacy" className="text-gray-600 text-xs hover:text-gray-400 transition-colors">Privacy Policy</a>
+                        <a href="/privacy-policy" className="text-gray-600 text-xs hover:text-gray-400 transition-colors">Privacy Policy</a>
                         <span className="text-gray-700">·</span>
-                        <a href="/safety" className="text-gray-600 text-xs hover:text-gray-400 transition-colors">Safety</a>
+                        <a href="/risk-assessments" className="text-gray-600 text-xs hover:text-gray-400 transition-colors">Safety</a>
                     </div>
                 </div>
             </div>

@@ -12,6 +12,7 @@ import DynamicProductPage from './components/Catalogue/DynamicProductPage';
 import Contact from './components/Contact/Contact';
 import NotFound from './components/404/NotFound';
 import SpeedDial from './components/SpeedDial/SpeedDial';
+import Footer from './components/Footer/Footer';
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -63,26 +64,22 @@ function App() {
   const meta = getMetaData(location.pathname);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Helmet>
-        {/* Page Title & Description */}
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
 
-        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:url" content={`https://bouncy-castle.netlify.app${location.pathname}`} />
         <meta property="og:image" content="https://bouncy-castle.netlify.app/social-image.png" />
 
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content="https://bouncy-castle.netlify.app/social-image.png" />
 
-        {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(generateJSONLD())}
         </script>
@@ -90,19 +87,28 @@ function App() {
 
       <ScrollToTop />
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/terms-and-conditions' element={<TermsPage />} />
-        <Route path='/risk-assessments' element={<RiskPage />} />
-        <Route path='/faq' element={<FAQPage />} />
-        <Route path='/bouncy-castles' element={<Products />} />
-        <Route path='/bouncy-castle/:id' element={<DynamicProductPage />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+      {/* Main content grows to fill remaining space */}
+      <main className="flex-1">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/terms-and-conditions' element={< RiskPage />} />
+          <Route path='/risk-assessments' element={<TermsPage />} />
+          <Route path='/frequently-asked-questions' element={<FAQPage />} />
+          <Route path='/bouncy-castles' element={<Products />} />
+          <Route path='/bouncy-castle/:id' element={<DynamicProductPage />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </main>
 
-      <SpeedDial />
-    </>
+      {/* Footer always at the bottom */}
+      <Footer />
+
+      {/* SpeedDial fixed on screen, does not affect body height */}
+      <div className="fixed bottom-5 right-5 z-50">
+        <SpeedDial />
+      </div>
+    </div>
   );
 }
 

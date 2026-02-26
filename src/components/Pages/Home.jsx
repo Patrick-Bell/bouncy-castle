@@ -13,7 +13,7 @@ import Reviews from "../Reviews/Reviews"
 const Home = () => {
 
     return (
-        <>
+        <div>
         <Banner />
         <Navbar />
         <Hero />
@@ -24,8 +24,7 @@ const Home = () => {
         <Reviews />
         <Action />
         <ShortFAQ />
-        <Footer />
-        </>
+        </div>
     )
 }
 

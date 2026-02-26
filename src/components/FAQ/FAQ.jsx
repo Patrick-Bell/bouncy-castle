@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import { Balloon, Bolt, Calendar, Castle, CloudLightning, DollarSign, Folder, Mail, MessageCircleIcon, Phone, Rainbow, Shield, Van, X } from "lucide-react";
 import { faqs } from "../../api/Categories";
+import Action from "../AboutUs/Action";
 
 const FAQPage = () => {
     const [openMap, setOpenMap] = useState({});
@@ -215,7 +216,7 @@ const FAQPage = () => {
                     </aside>
                 </div>
             </div>
-            <Footer />
+            <Action />
         </div>
     );
 };

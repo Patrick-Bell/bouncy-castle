@@ -187,4 +187,7 @@
   .marker-cluster div {
     @apply font-[inherit];
     }
+    html, body {
+      @apply m-0 p-0 h-full bg-background;
+    }
 }

@@ -3,3 +3,16 @@
 #booking {
     scroll-margin-top: 80px;
   }
+
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #111; /* match footer bg */
+  }
