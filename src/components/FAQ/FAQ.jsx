@@ -144,7 +144,7 @@ const FAQPage = () => {
                                         >
                                             <button
                                                 onClick={() => toggle(cat.id, qi)}
-                                                className="w-full flex items-center justify-between px-6 py-4 text-left gap-4"
+                                                className="cursor-pointer w-full flex items-center justify-between px-6 py-4 text-left gap-4"
                                             >
                                                 <span className={`font-bold text-sm transition-colors duration-200 ${isOpen ? "text-pink-500" : "text-gray-800"}`}>
                                                     {item.q}

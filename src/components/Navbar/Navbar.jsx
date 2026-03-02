@@ -67,10 +67,10 @@ const Navbar = () => {
 
             <div className="w-px h-5 bg-gray-200 rounded-full mx-1" />
 
-            <button className="bg-gradient-to-br from-pink-400 to-pink-600 text-white p-2 rounded-lg flex items-center gap-2 cursor-pointer hover:shadow-sm">
+            <a href='mailto:test123@gmail.com' className="bg-gradient-to-br from-pink-400 to-pink-600 text-white p-2 rounded-lg flex items-center gap-2 cursor-pointer hover:shadow-md">
               <MdEmail size={20} />
               <p className="text-sm">Contact Us</p>
-            </button>
+            </a>
           </div>
 
           {/* Hamburger — visible on mobile only */}

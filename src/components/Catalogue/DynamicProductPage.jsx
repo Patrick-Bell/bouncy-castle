@@ -96,7 +96,7 @@ const DynamicProductPage = () => {
                           <span className="w-5 h-5 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                             <p className="text-pink-500 items-center flex align-middle">6</p>
                           </span>
-                          <p className="text-sm text-gray-600">Click <span onClick={() => document.getElementById('booking').scrollIntoView({ behavior:'smooth', block:'start' })} className="text-pink-500 font-bold cursor-pointer underline hover:text-pink-600 transition-colors">here</span> to get started </p>
+                          <p className="text-sm text-gray-600">Click <span onClick={() => document.getElementById('booking').scrollIntoView({ behavior:'smooth', block:'start' })} className="text-pink-500 font-bold cursor-pointer underline hover:text-pink-600 transition-colors">here</span> to get started.</p>
                         </li>
                     </ul>
                   </div>

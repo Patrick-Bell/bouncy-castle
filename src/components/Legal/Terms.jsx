@@ -329,8 +329,8 @@ const RiskAssessmentPage = () => {
                                         {/* Placeholder image */}
                                         <div className="w-full h-36 bg-white rounded-2xl border border-white/60 flex flex-col items-center justify-center gap-2 text-gray-300">
                                             <div className="text-4xl">📄</div>
-                                            <p className="text-xs font-semibold text-gray-400">Certificate Placeholder</p>
-                                            <p className="text-xs text-gray-300">Replace with actual scan</p>
+                                            <p className="text-xs font-semibold text-gray-400">Placeholder</p>
+                                            <p className="text-xs text-gray-300">Placeholder</p>
                                         </div>
 
                                         <p className="text-xs text-gray-500 leading-relaxed">{cert.description}</p>

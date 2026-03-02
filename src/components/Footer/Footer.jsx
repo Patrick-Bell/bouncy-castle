@@ -8,7 +8,7 @@ const Footer = () => {
     const links = {
         "Quick Links": [
             { label: "Home", href: "/" },
-            { label: "Our Castles", href: "/castles" },
+            { label: "Our Castles", href: "/bouncy-castles" },
             { label: "About Us", href: "/about" },
             { label: "Awards", href: "/awards" },
             { label: "Contact", href: "/contact" },
