@@ -310,7 +310,7 @@ const RiskAssessmentPage = () => {
                         </div>
 
                         {/* Certifications */}
-                        <div id="ra-certs" className="scroll-mt-8">
+                        <div id="ra-certs" className="scroll-mt-20">
                             <h2 className="font-extrabold text-gray-900 text-xl mb-4">Our Certifications & Documents</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {certifications.map((cert, i) => (
@@ -373,7 +373,7 @@ const RiskAssessmentPage = () => {
                             <div
                                 key={section.id}
                                 id={`ra-${section.id}`}
-                                className="bg-white rounded-3xl border border-gray-100 p-7 flex flex-col gap-5 scroll-mt-8"
+                                className="bg-white rounded-3xl border border-gray-100 p-7 flex flex-col gap-5 scroll-mt-15"
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="w-11 h-11 rounded-2xl bg-pink-50 border border-pink-100 flex items-center justify-center text-xl flex-shrink-0">

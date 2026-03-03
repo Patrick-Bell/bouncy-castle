@@ -18,6 +18,7 @@ const Footer = () => {
             { label: "Terms & Conditions", href: "/terms-and-conditions" },
             { label: "FAQ", href: "/frequently-asked-questions" },
             { label: "Privacy Policy", href: "/privacy" },
+            { label: 'Payments & Refunds', href: '/payments' },
         ],
     };
 

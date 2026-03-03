@@ -14,6 +14,7 @@ import NotFound from './components/404/NotFound';
 import SpeedDial from './components/SpeedDial/SpeedDial';
 import Footer from './components/Footer/Footer';
 import PaymentsPage from './components/Legal/PaymentsPage';
+import GalleryPage from './components/AboutUs/Gallery';
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -99,6 +100,7 @@ function App() {
           <Route path='/bouncy-castle/:id' element={<DynamicProductPage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/payments' element={<PaymentsPage />} />
+          <Route path='/gallery' element={<GalleryPage />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>

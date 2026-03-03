@@ -225,7 +225,7 @@ const TermsPage = () => {
                             <div
                                 key={clause.id}
                                 id={`term-${clause.id}`}
-                                className="bg-white rounded-3xl border border-gray-100 p-7 flex flex-col gap-4 scroll-mt-8"
+                                className="bg-white rounded-3xl border border-gray-100 p-7 flex flex-col gap-4 scroll-mt-15"
                             >
                                 <h2 className="font-extrabold text-gray-900 text-base">{clause.title}</h2>
                                 <ul className="flex flex-col gap-3">

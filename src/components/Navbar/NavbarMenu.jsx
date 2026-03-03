@@ -55,12 +55,15 @@ const NavbarMenu = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Information</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="w-96">
+            <ul className="w-148 grid grid-cols-2">
               <ListItem href="/risk-assessments" title="Risk Assessment">
                 Learn about safety and risk management for our inflatables.
               </ListItem>
               <ListItem href="/terms-and-conditions" title="Terms & Conditions">
                 Read our rental terms and policies.
+              </ListItem>
+              <ListItem href="/gallery" title="Gallery">
+                Browse photos of our bouncy castles in action at various events.
               </ListItem>
               <ListItem href="/payments" title="Payments">
                 View our payment options and policies.

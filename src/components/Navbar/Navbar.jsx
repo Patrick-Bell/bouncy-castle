@@ -1,13 +1,14 @@
 import { useState } from "react";
 import NavbarMenu from "./NavbarMenu";
 import { MdCastle, MdEmail, MdMenu, MdClose } from "react-icons/md";
-import { FaSearch, FaInstagram } from "react-icons/fa";
+import { FaSearch, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useNavigate } from "react-router";
+import SearchBox from "./Search";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -35,16 +36,7 @@ const Navbar = () => {
 
           {/* Right actions — hidden on mobile */}
           <div className="hidden md:flex items-center gap-1">
-            <Tooltip>
-              <TooltipTrigger>
-                <button className="flex items-center justify-center rounded-lg hover:border hover:border-gray-200 text-gray-400 hover:text-gray-600 transition-colors hover:bg-gray-100 p-2 cursor-pointer">
-                  <FaSearch size={17} />
-                </button>
-              </TooltipTrigger>
-              <TooltipContent side='bottom'>
-                <p className="text-xs">Search</p>
-              </TooltipContent>
-            </Tooltip>
+            <SearchBox />
 
             <div className="w-px h-5 bg-gray-200 rounded-full mx-1" />
 
@@ -89,10 +81,9 @@ const Navbar = () => {
             {/* Nav links */}
             {[
               { label: "Home", href: "/" },
-              { label: "Castles", href: "/castles" },
-              { label: "Packages", href: "/packages" },
+              { label: "Castles", href: "/bouncy-castles" },
               { label: "Gallery", href: "/gallery" },
-              { label: "About", href: "/about" },
+              { label: "Contact", href: "/contact" },
             ].map(({ label, href }) => (
               <a
                 key={label}
@@ -106,11 +97,24 @@ const Navbar = () => {
 
             <div className="h-px bg-gray-100 my-2" />
 
-            {/* Search */}
-            <button className="flex items-center gap-3 w-full px-2 py-2 rounded-lg text-gray-500 hover:bg-gray-50 hover:text-gray-700 transition-colors text-sm">
-              <FaSearch size={16} />
-              Search
-            </button>
+            {[
+              { label: "Risk Assessments", href: "/risk-assessments" },
+              { label: "Terms and Conditions", href: "/terms-and-conditions" },
+              { label: "Payment Information", href: "/payments" },
+              { label: "FAQ", href: "/frequently-asked-questions" },
+            ].map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                className="w-full px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-pink-500 transition-colors"
+                onClick={() => setMobileOpen(false)}
+              >
+                {label}
+              </a>
+            ))}
+
+            <div className="h-px bg-gray-100 my-2" />
+
 
             {/* Instagram */}
             <a
@@ -121,6 +125,26 @@ const Navbar = () => {
             >
               <FaInstagram size={18} />
               Instagram
+            </a>
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 w-full px-2 py-2 rounded-lg text-gray-500 hover:bg-gray-50 hover:text-gray-700 transition-colors text-sm"
+            >
+              <FaFacebook size={18} />
+              Facebook
+            </a>
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 w-full px-2 py-2 rounded-lg text-gray-500 hover:bg-gray-50 hover:text-gray-700 transition-colors text-sm"
+            >
+              <FaTwitter size={18} />
+              Twitter
             </a>
 
             <div className="h-px bg-gray-100" />
