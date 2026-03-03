@@ -144,7 +144,7 @@ const DynamicProductPage = () => {
                 {/* Overnight toggle */}
                 <button
                   onClick={() => setOvernight(!overnight)}
-                  className={`flex items-center justify-between w-full px-4 py-3 rounded-2xl border-2 transition-all duration-200 ${
+                  className={`cursor-pointer flex items-center justify-between w-full px-4 py-3 rounded-2xl border-2 transition-all duration-200 ${
                     overnight
                       ? "border-pink-300 bg-pink-50"
                       : "border-gray-100 hover:border-pink-200 hover:bg-pink-50/50"

@@ -8,6 +8,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { castles } from "@/api/Products"
 
 const components = [
   {
@@ -52,17 +53,17 @@ const NavbarMenu = () => {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Information</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-96">
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built with Tailwind CSS.
+              <ListItem href="/risk-assessments" title="Risk Assessment">
+                Learn about safety and risk management for our inflatables.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
+              <ListItem href="/terms-and-conditions" title="Terms & Conditions">
+                Read our rental terms and policies.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem href="/payments" title="Payments">
+                View our payment options and policies.
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -71,13 +72,13 @@ const NavbarMenu = () => {
           <NavigationMenuTrigger>Inflatables</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
+              {castles.map((castle) => (
                 <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
+                  key={castle.name}
+                  title={castle.name}
+                  href={`/bouncy-castle/${castle.id}`}
                 >
-                  {component.description}
+                  {castle.description}
                 </ListItem>
               ))}
             </ul>
