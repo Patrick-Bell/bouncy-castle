@@ -42,13 +42,13 @@ const ShortFAQ = () => {
 
                 {/* Header */}
                 <div className="flex flex-col items-center text-center gap-3 mb-14">
-                    <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-pink-400 inline-block" />
+                    <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+                        <span className="w-6 h-px secondary-bg inline-block" />
                         Got Questions?
-                        <span className="w-6 h-px bg-pink-400 inline-block" />
+                        <span className="w-6 h-px secondary-bg inline-block" />
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
-                        We've got <span className="text-pink-500">answers</span>
+                        We've got <span className="secondary-text">answers</span>
                     </h2>
                     <p className="text-gray-400 text-base max-w-md">
                         Everything you need to know before booking. Still unsure? Just drop us a message.
@@ -62,19 +62,19 @@ const ShortFAQ = () => {
                         return (
                             <div
                                 key={i}
-                                className={`bg-white rounded-2xl border transition-all duration-200 overflow-hidden ${
-                                    isOpen ? "border-pink-300 shadow-md shadow-pink-50" : "border-gray-100 hover:border-pink-200"
+                                className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
+                                    isOpen ? "border-[#ebeddf]" : "border-gray-100 hover:border-[#ebeddf]"
                                 }`}
                             >
                                 <button
                                     onClick={() => toggle(i)}
                                     className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
                                 >
-                                    <span className={`font-bold text-sm md:text-base transition-colors duration-200 ${isOpen ? "text-pink-500" : "text-gray-900"}`}>
+                                    <span className={`font-bold text-sm md:text-base transition-colors duration-200 ${isOpen ? "primary-text" : "primary-text"}`}>
                                         {faq.q}
                                     </span>
                                     <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-200 ${
-                                        isOpen ? "bg-pink-500 text-white rotate-45" : "bg-gray-100 text-gray-400"
+                                        isOpen ? "primary-bg primary-text rotate-45" : "bg-gray-100 text-gray-400"
                                     }`}>
                                         +
                                     </span>

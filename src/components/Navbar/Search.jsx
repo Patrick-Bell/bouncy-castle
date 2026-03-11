@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/tooltip";
 import { FaFacebook, FaSearch } from 'react-icons/fa'
 import { castles } from '../../api/Products'
-import { BsFacebook, BsInfoCircle, BsInstagram, BsTiktok, BsTwitter } from 'react-icons/bs'
+import { BsFacebook, BsInfoCircle, BsInstagram, BsTiktok, BsTwitter, BsWhatsapp } from 'react-icons/bs'
 
 const SearchBox = () => {
   const [open, setOpen] = useState(false)
@@ -46,6 +46,7 @@ const SearchBox = () => {
     { title: 'Facebook', href: 'https://facebook.com', icon: <BsFacebook /> },
     { title: 'Twitter', href: 'https://twitter.com', icon: <BsTwitter /> },
     { title: 'TikTok', href: 'https://tiktok.com', icon: <BsTiktok /> },
+    { title: 'WhatsApp', href: 'https://wa.me/1234567890', icon: <BsWhatsapp /> },
   ]
 
   const inflatables = castles.map((castle) => ({

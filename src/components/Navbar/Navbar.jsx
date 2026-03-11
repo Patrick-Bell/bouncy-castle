@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/tooltip";
 import { useNavigate } from "react-router";
 import SearchBox from "./Search";
+import Logo from '../../assets/logo.jpg'
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -16,16 +17,16 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm`}>
+      <nav className={`fixed w-full lg:sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm`}>
         <div className="flex items-center justify-between px-4 sm:px-8 h-16">
 
           {/* Logo */}
           <div onClick={() => navigate('/')} className="flex items-center gap-3 cursor-pointer group">
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-pink-400 to-pink-600 text-white shadow-md shadow-pink-200 transition-transform duration-200 group-hover:-rotate-6 group-hover:scale-110">
-              <MdCastle size={22} />
+            <div className="flex items-center justify-center w-15 h-15 rounded-xl">
+              <img src={Logo} className="rounded-xl" />
             </div>
-            <span className="font-extrabold text-lg text-gray-900 tracking-tight">
-              Bouncy <span className="text-pink-500">Castle</span>
+            <span className="font-extrabold text-lg primary-text tracking-tight">
+              Haze <span className="">Events</span>
             </span>
           </div>
 
@@ -59,7 +60,7 @@ const Navbar = () => {
 
             <div className="w-px h-5 bg-gray-200 rounded-full mx-1" />
 
-            <a href='mailto:test123@gmail.com' className="bg-gradient-to-br from-pink-400 to-pink-600 text-white p-2 rounded-lg flex items-center gap-2 cursor-pointer hover:shadow-md">
+            <a href='mailto:test123@gmail.com' className="primary-bg text-primary p-2 rounded-lg flex items-center gap-2 cursor-pointer hover:shadow-md">
               <MdEmail size={20} />
               <p className="text-sm">Contact Us</p>
             </a>
@@ -67,7 +68,7 @@ const Navbar = () => {
 
           {/* Hamburger — visible on mobile only */}
           <button
-            className="md:hidden flex items-center justify-center p-2 rounded-lg bg-pink-500 text-white hover:bg-pink-600 cursor-pointer transition-colors"
+            className="md:hidden flex items-center justify-center p-2 rounded-lg primary-bg primary-text hover:bg-pink-600 cursor-pointer transition-colors"
             onClick={() => setMobileOpen((prev) => !prev)}
             aria-label="Toggle menu"
           >
@@ -77,7 +78,7 @@ const Navbar = () => {
 
         {/* Mobile dropdown */}
         {mobileOpen && (
-            <div className="md:hidden fixed inset-0 top-16 bg-white px-4 pb-4 flex flex-col gap-1 z-40 overflow-y-auto">
+            <div className="md:hidden fixed inset-0 top-16 bg-white px-4 pb-4 flex flex-col gap-1 z-40 overflow-auto">
             {/* Nav links */}
             {[
               { label: "Home", href: "/" },

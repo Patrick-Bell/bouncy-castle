@@ -52,7 +52,7 @@ const ProductModal = ({ product, open, onClose }) => {
     return (
         <Dialog open={open} onOpenChange={onClose}>
             <DialogTrigger asChild>
-            <button className="cursor-pointer w-full mt-1 py-2.5 rounded-xl bg-gray-50 text-gray-700 font-bold text-sm hover:bg-pink-500 hover:text-white transition-all duration-200">
+            <button className="cursor-pointer w-full mt-1 py-2.5 rounded-xl bg-gray-50 text-gray-700 font-bold text-sm hover:bg-[#ebeddf] hover:text-[#3b3e33] transition-all duration-200">
                     View
             </button>
             </DialogTrigger>
@@ -248,7 +248,7 @@ const ProductModal = ({ product, open, onClose }) => {
                                 <div className="text-xs text-pink-700 leading-relaxed">
                                     <p>An adult supervisor (18+) must be present at all times. All our castles are <strong>PIPA certified</strong> and covered by <strong>£5 million public liability insurance</strong>.</p>
                                     <a
-                                        href="/safety"
+                                        href="/risk-assessments"
                                         className="inline-flex items-center gap-1 mt-2 font-extrabold text-pink-600 hover:text-pink-800 underline underline-offset-2 transition-colors"
                                     >
                                         Read our full Risk Assessment & Safety Guide →

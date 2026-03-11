@@ -1,6 +1,7 @@
 import { MdCastle, MdEmail } from "react-icons/md";
 import { FaInstagram, FaFacebook, FaTiktok, FaWhatsapp, FaMobile, FaPhone } from "react-icons/fa";
 import { ArrowUp, Locate, LocateFixedIcon, Mail, MapPin, Phone, Pin } from "lucide-react";
+import Logo from '../../assets/logo.jpg'
 
 const Footer = () => {
     const year = new Date().getFullYear();
@@ -23,11 +24,11 @@ const Footer = () => {
     };
 
     const socials = [
-        { icon: <FaInstagram size={18} />, href: "https://instagram.com", label: "Instagram", hover: "hover:bg-pink-500" },
-        { icon: <FaFacebook size={18} />, href: "https://facebook.com", label: "Facebook", hover: "hover:bg-pink-500" },
-        { icon: <FaWhatsapp size={18} />, href: "https://wa.com", label: "TikTok", hover: "hover:bg-pink-500" },
-        { icon: <MdEmail size={18} />, href: "https://tiktok.com", label: "TikTok", hover: "hover:bg-pink-500" },
-        { icon: <FaPhone size={18} />, href: "https://tiktok.com", label: "TikTok", hover: "hover:bg-pink-500" },
+        { icon: <FaInstagram size={18} />, href: "https://instagram.com", label: "Instagram", hover: "hover:bg-[#ebeddf]" },
+        { icon: <FaFacebook size={18} />, href: "https://facebook.com", label: "Facebook", hover: "hover:bg-[#ebeddf]" },
+        { icon: <FaWhatsapp size={18} />, href: "https://wa.com", label: "TikTok", hover: "hover:bg-[#ebeddf]" },
+        { icon: <MdEmail size={18} />, href: "https://tiktok.com", label: "TikTok", hover: "hover:bg-[#ebeddf]" },
+        { icon: <FaPhone size={18} />, href: "https://tiktok.com", label: "TikTok", hover: "hover:bg-[#ebeddf]" },
     ];
 
     return (
@@ -41,16 +42,13 @@ const Footer = () => {
                     <div className="flex flex-col gap-5 lg:col-span-2">
                         {/* Logo */}
                         <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center text-white shadow-lg shadow-pink-900/30">
-                                <MdCastle size={22} />
+                            <div className="w-30 h-30 rounded-xl bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center text-white shadow-lg shadow-pink-900/30">
+                                <img src={Logo} className="rounded-xl" alt="" />
                             </div>
-                            <span className="font-extrabold text-lg text-white tracking-tight">
-                                Bouncy <span className="text-pink-400">Castle</span>
-                            </span>
                         </div>
 
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-                            A mother and daughter bouncy castle hire business based in Surrey. Bringing safe, clean, and magical fun to parties across Surrey and South London since 2016.
+                            Haze Events - Moments That Matter. A mother and daughter team dedicated to creating unforgettable memories with our premium bouncy castle hire. We bring joy, laughter, and a touch of magic to every event, ensuring your special occasions are filled with fun and happiness.
                         </p>
 
                         {/* Contact quick info */}
@@ -76,7 +74,7 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={s.label}
-                                    className={`w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200 hover:scale-110 ${s.hover}`}
+                                    className={`w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:primary-text transition-all duration-200 hover:scale-110 ${s.hover}`}
                                 >
                                     {s.icon}
                                 </a>
@@ -93,7 +91,7 @@ const Footer = () => {
                                     <li key={i}>
                                         <a
                                             href={item.href}
-                                            className="text-gray-400 text-sm hover:text-pink-400 transition-colors duration-200"
+                                            className="text-gray-400 text-sm hover:hover:text-[#ebeddf] transition-colors duration-200"
                                         >
                                             {item.label}
                                         </a>

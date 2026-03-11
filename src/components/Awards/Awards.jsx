@@ -60,14 +60,14 @@ const Awards = () => {
             <div className="max-w-7xl mx-auto">
 
                 {/* Section header */}
-                <div className="flex flex-col items-center text-center gap-3 mb-14">
-                    <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-pink-400 inline-block" />
+                <div className="flex flex-col items-center text-center gap-3 mb-6">
+                    <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+                        <span className="w-6 h-px secondary-bg inline-block" />
                         Recognition
-                        <span className="w-6 h-px bg-pink-400 inline-block" />
+                        <span className="w-6 h-px secondary-bg inline-block" />
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
-                        Award-winning <span className="text-pink-500">fun</span>
+                        Award-winning <span className="secondary-text">fun</span>
                     </h2>
                     <p className="text-gray-400 text-base max-w-md">
                         We're proud of what we've built — and even prouder when others notice too.
@@ -82,7 +82,7 @@ const Awards = () => {
                             <div key={i} className="flex gap-5 group">
                                 {/* Timeline spine */}
                                 <div className="flex flex-col items-center">
-                                    <div className="w-11 h-11 rounded-2xl bg-pink-50 border border-pink-100 flex items-center justify-center text-xl flex-shrink-0 group-hover:bg-pink-500 group-hover:border-pink-500 transition-all duration-200 group-hover:scale-110">
+                                    <div className="w-11 h-11 rounded-2xl primary-bg border border-pink-100 flex items-center justify-center text-xl flex-shrink-0">
                                         <span className="group-hover:grayscale-0">{award.icon}</span>
                                     </div>
                                     {i < awards.length - 1 && (
@@ -92,8 +92,8 @@ const Awards = () => {
 
                                 {/* Content */}
                                 <div className="pb-8 flex flex-col gap-1 pt-1.5">
-                                    <span className="text-xs font-bold text-pink-400 tracking-widest uppercase">{award.year}</span>
-                                    <h3 className="font-extrabold text-gray-900 text-base group-hover:text-pink-500 transition-colors duration-200">
+                                    <span className="text-xs font-bold primary-text tracking-widest uppercase">{award.year}</span>
+                                    <h3 className="font-extrabold primary-text text-base transition-colors duration-200">
                                         {award.title}
                                     </h3>
                                     <p className="text-gray-400 text-sm leading-relaxed">{award.body}</p>

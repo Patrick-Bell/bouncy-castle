@@ -191,3 +191,26 @@
       @apply m-0 p-0 h-full bg-background;
     }
 }
+
+
+
+.primary-bg {
+  @apply bg-[#ebeddf];
+}
+
+.primary-bg:hover {
+  @apply bg-[#ebeddf];
+
+}
+
+.secondary-bg {
+  @apply bg-[#3b3e33];
+}
+
+.primary-text {
+  @apply text-[#3b3e33];
+}
+
+.secondary-text {
+  @apply text-[#dfe5c8];
+}

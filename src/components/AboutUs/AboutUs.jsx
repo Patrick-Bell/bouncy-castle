@@ -1,5 +1,6 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import Logo from '../../assets/logo.jpg'
 
 
 const stats = [
@@ -24,14 +25,14 @@ const AboutUs = () => {
                 <div className="flex-1 flex flex-col gap-6">
 
                     {/* Eyebrow */}
-                    <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-pink-400 inline-block" />
+                    <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+                        <span className="w-6 h-px secondary-bg inline-block" />
                         Our Story
                     </span>
 
                     {/* Heading */}
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
-                        Fun is a <span className="text-pink-500">family</span> business.
+                        Fun is a <span className="secondary-text">family</span> business.
                     </h2>
 
                     {/* Body */}
@@ -44,7 +45,7 @@ const AboutUs = () => {
                         {stats.map((stat, i) => (
                             <div
                                 key={i}
-                                className="flex-1 min-w-[80px] flex flex-col items-center justify-center py-5 px-4 hover:bg-pink-50 transition-colors duration-200 group"
+                                className="flex-1 min-w-[80px] flex flex-col items-center justify-center py-5 px-4 hover:bg-[#ebeddf] transition-colors duration-200 group"
                             >
                                 <span className="text-2xl font-extrabold text-gray-900">
                                 {inView ? <CountUp duration={5} suffix={stat.suffix} end={stat.value} /> : 0}
@@ -67,12 +68,12 @@ const AboutUs = () => {
                         />
                         {/* Floating badge */}
                         <div className="absolute bottom-5 left-5 bg-white rounded-2xl px-4 py-3 shadow-lg flex items-center gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center text-white text-lg">
-                                🏰
+                            <div className="w-9 h-9 rounded-xl flex items-center justify-center text-white text-lg">
+                                <img src={Logo} className="rounded-lg" alt="" />
                             </div>
                             <div>
                                 <p className="text-xs font-bold text-gray-900">Family Run</p>
-                                <p className="text-xs text-gray-400">Since 2016</p>
+                                <p className="text-xs text-gray-400">Since 2026</p>
                             </div>
                         </div>
                     </div>
