@@ -145,6 +145,7 @@ const clauses = [
     },
 ];
 
+
 const TermsPage = () => {
     const [activeId, setActiveId] = useState("booking");
 
@@ -175,30 +176,31 @@ const TermsPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-[#f8f9f2]"> {/* Soft neutral background */}
             <Navbar />
 
-            <div className="relative bg-gradient-to-br from-pink-500 to-pink-600 overflow-hidden">
-                <div className="absolute top-0 right-0 w-80 h-80 bg-pink-400/30 rounded-full -translate-y-1/2 translate-x-1/3" />
-                <div className="absolute bottom-0 left-10 w-48 h-48 bg-pink-400/20 rounded-full translate-y-1/2" />
-                {/* Yellow accent blob */}
-                <div className="absolute top-8 right-1/3 w-20 h-20 bg-pink-300/30 rounded-full" />
+            {/* HERO - Swapped to Haze Charcoal background */}
+            <div className="relative bg-[#3b3e33] overflow-hidden">
+                {/* Decorative circles adjusted to logo secondary-text color at low opacity */}
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#f0f1e8]/10 rounded-full -translate-y-1/2 translate-x-1/3" />
+                <div className="absolute bottom-0 left-10 w-48 h-48 bg-[#f0f1e8]/5 rounded-full translate-y-1/2" />
+                <div className="absolute top-8 right-1/3 w-20 h-20 bg-[#f0f1e8]/10 rounded-full" />
 
                 <div className="relative max-w-5xl mx-auto px-8 py-20 flex flex-col gap-6">
                     <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center gap-2 text-white font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-white" />
+                    <span className="inline-flex items-center gap-2 text-[#f0f1e8] font-bold text-sm tracking-widest uppercase">
+                        <span className="w-6 h-px bg-[#f0f1e8]" />
                         Legal
                     </span>
                     </div>
-                    <h1 className="text-6xl font-extrabold text-white tracking-tight leading-none">
+                    <h1 className="text-6xl font-extrabold text-[#f0f1e8] tracking-tight leading-none">
                         Terms & <br />
-                        <span className="text-pink-300">Conditions.</span>
+                        <span className="opacity-60 font-extrabold text-[#f0f1e8]">Conditions.</span>
                     </h1>
-                    <p className="text-pink-100 text-lg max-w-xl leading-relaxed">
+                    <p className="text-[#f0f1e8]/80 text-lg max-w-xl leading-relaxed">
                     Please read these terms carefully before making a booking. By confirming a hire with us, you agree to be bound by the following conditions in full.
                     </p>
-                <p className="text-xs text-gray-300">Last updated: January 2025 · Bouncy Castle Hire, Surrey, UK</p>
+                <p className="text-xs text-[#f0f1e8]/40">Last updated: January 2025 · Haze Events, UK</p>
                 </div>
             </div>
 
@@ -209,12 +211,12 @@ const TermsPage = () => {
                     {/* Main content */}
                     <div className="flex-1 flex flex-col gap-5 min-w-0">
 
-                        {/* Summary box */}
-                        <div className="bg-pink-50 border border-pink-100 rounded-2xl p-6 flex gap-4">
-                            <span className="text-2xl flex-shrink-0"><File className="text-pink-500" /></span>
+                        {/* Summary box - Swapped to Haze Parchment tones */}
+                        <div className="bg-[#f0f1e8] border border-[#d8dbca] rounded-2xl p-6 flex gap-4">
+                            <span className="text-2xl flex-shrink-0"><File className="text-[#3b3e33]" /></span>
                             <div>
-                                <p className="font-bold text-pink-800 text-sm mb-1">The Short Version</p>
-                                <p className="text-pink-700 text-sm leading-relaxed">
+                                <p className="font-bold text-[#3b3e33] text-sm mb-1">The Short Version</p>
+                                <p className="text-[#3b3e33]/70 text-sm leading-relaxed">
                                     Be safe, supervise the kids, pay on time, treat the equipment with care, and let us know if anything goes wrong. We're a family business and we'll always try to do right by you — we just ask the same in return.
                                 </p>
                             </div>
@@ -225,13 +227,14 @@ const TermsPage = () => {
                             <div
                                 key={clause.id}
                                 id={`term-${clause.id}`}
-                                className="bg-white rounded-3xl border border-gray-100 p-7 flex flex-col gap-4 scroll-mt-15"
+                                className="bg-white rounded-3xl border border-[#d8dbca]/40 p-7 flex flex-col gap-4 scroll-mt-15"
                             >
-                                <h2 className="font-extrabold text-gray-900 text-base">{clause.title}</h2>
+                                <h2 className="font-extrabold text-[#3b3e33] text-base">{clause.title}</h2>
                                 <ul className="flex flex-col gap-3">
                                     {clause.body.map((point, j) => (
                                         <li key={j} className="flex items-start gap-3 text-sm text-gray-500 leading-relaxed">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-pink-400 flex-shrink-0 mt-2" />
+                                            {/* Bullet point color change */}
+                                            <span className="w-1.5 h-1.5 rounded-full bg-[#3b3e33]/30 flex-shrink-0 mt-2" />
                                             {point}
                                         </li>
                                     ))}
@@ -240,30 +243,30 @@ const TermsPage = () => {
                         ))}
 
                         {/* Footer note */}
-                        <div className="bg-gray-100 rounded-2xl p-5 text-center flex flex-col gap-2">
+                        <div className="bg-white/50 border border-[#d8dbca]/30 rounded-2xl p-5 text-center flex flex-col gap-2">
                             <p className="text-gray-500 text-xs font-bold uppercase tracking-wide">Questions about these terms?</p>
                             <p className="text-gray-400 text-xs">
-                                Email us at <strong className="text-gray-500">hello@bouncycastle.co.uk</strong> or call <strong className="text-gray-500">07700 900 123</strong> and we'll be happy to help.
+                                Email us at <strong className="text-[#3b3e33]">hello@bouncycastle.co.uk</strong> or call <strong className="text-[#3b3e33]">07700 900 123</strong>
                             </p>
                         </div>
                     </div>
 
                     {/* Sticky right nav */}
                     <aside className="hidden lg:flex flex-col gap-1 sticky top-20 w-52 flex-shrink-0">
-                        <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 px-3">On this page</p>
+                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-3">On this page</p>
                         {clauses.map(({ id, title }) => {
                             const isActive = activeId === id;
                             return (
                                 <button
                                     key={id}
                                     onClick={() => scrollTo(id)}
-                                    className={`text-left text-xs px-3 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center gap-2.5 group w-full
+                                    className={`text-left text-xs px-3 py-2 rounded-lg font-bold transition-all duration-200 flex items-center gap-2.5 group w-full
                                         ${isActive
-                                            ? "bg-pink-50 text-pink-500"
-                                            : "text-gray-400 hover:text-gray-700 hover:bg-gray-100"
+                                            ? "bg-[#3b3e33] text-[#f0f1e8]"
+                                            : "text-gray-400 hover:text-[#3b3e33] hover:bg-[#f0f1e8]"
                                         }`}
                                 >
-                                    <span className={`w-0.5 h-4 rounded-full flex-shrink-0 transition-all duration-200 ${isActive ? "bg-pink-500" : "bg-gray-200 group-hover:bg-gray-300"}`} />
+                                    <span className={`w-0.5 h-4 rounded-full flex-shrink-0 transition-all duration-200 ${isActive ? "bg-[#f0f1e8]" : "bg-gray-200 group-hover:bg-gray-300"}`} />
                                     {title.replace(/^\d+\.\s/, "")}
                                 </button>
                             );

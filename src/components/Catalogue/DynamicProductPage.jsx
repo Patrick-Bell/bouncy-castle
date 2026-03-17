@@ -62,9 +62,9 @@ const DynamicProductPage = () => {
       <div className="px-8 pt-6 pb-0">
         <div className="max-w-7xl mx-auto">
           <nav className="text-xs text-gray-400 font-medium flex items-center gap-1.5">
-            <a href="/" className="hover:text-pink-500 transition">Home</a>
+            <a href="/" className="hover:text-[#3b3e33] transition">Home</a>
             <span>/</span>
-            <a href="/bouncy-castles" className="hover:text-pink-500 transition">Castles</a>
+            <a href="/bouncy-castles" className="hover:text-[#3b3e33] transition">Castles</a>
             <span>/</span>
             <span className="text-gray-600">{castle.name}</span>
           </nav>
@@ -86,17 +86,17 @@ const DynamicProductPage = () => {
                     <ul className="flex flex-col gap-2">
                       {howToBook?.map((item, i) => (
                         <li key={i} className="flex items-start gap-3 text-sm text-gray-600">
-                          <span className="w-5 h-5 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <p className="text-pink-500 items-center flex align-middle">{i + 1}</p>
+                          <span className="w-5 h-5 rounded-full primary-bg flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <p className="primary-text items-center flex align-middle">{i + 1}</p>
                           </span>
                           {item}
                         </li>
                       ))}
                        <li className="flex items-start gap-3 text-sm text-gray-600">
-                          <span className="w-5 h-5 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <p className="text-pink-500 items-center flex align-middle">6</p>
+                          <span className="w-5 h-5 rounded-full primary-bg flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <p className="primary-text items-center flex align-middle">6</p>
                           </span>
-                          <p className="text-sm text-gray-600">Click <span onClick={() => document.getElementById('booking').scrollIntoView({ behavior:'smooth', block:'start' })} className="text-pink-500 font-bold cursor-pointer underline hover:text-pink-600 transition-colors">here</span> to get started.</p>
+                          <p className="text-sm text-gray-600">Click <span onClick={() => document.getElementById('booking').scrollIntoView({ behavior:'smooth', block:'start' })} className="text-primary font-bold cursor-pointer underline transition-colors">here</span> to get started.</p>
                         </li>
                     </ul>
                   </div>
@@ -112,7 +112,7 @@ const DynamicProductPage = () => {
                   {castle.name}
                 </h1>
                 <div className="flex items-center gap-2 flex-wrap">
-                    <span onClick={() => document.getElementById('booking').scrollIntoView({ behavior:'smooth', block:'start' })} className={`bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-2 hover:bg-pink-600 transition-colors cursor-pointer`}>
+                    <span onClick={() => document.getElementById('booking').scrollIntoView({ behavior:'smooth', block:'start' })} className={`primary-bg primary-text text-xs font-bold px-3 py-1 rounded-full flex items-center gap-2 hover:shadow-sm transition-colors cursor-pointer`}>
                       <MessageCircle className="w-3" />
                       Book Now
                     </span>
@@ -120,51 +120,51 @@ const DynamicProductPage = () => {
               </div>
                 <p className="text-gray-500 text-sm leading-relaxed max-w-lg">{castle.longDescription}</p>
 
-              {/* ── Pricing Card ── */}
-              <div className="bg-white rounded-3xl border border-gray-100 p-5 flex flex-col gap-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-1">Price</p>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-extrabold text-gray-900">
-                        <Highlighter animationDuration={3000} isView iterations={8} action="underline" color="#EC4899">{basePrice}</Highlighter>
-                        </span>
-                        <div>
-                      {overnight && (
-                        <span className="text-sm font-bold text-pink-400">+ £30</span>
-                      )}
-                      </div>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-400 font-medium text-right leading-relaxed">Includes delivery,<br/>setup & collection</span>
-                </div>
+             {/* ── Pricing Card ── */}
+<div className="rounded-3xl border border-[#d8dbca] p-5 flex flex-col gap-4">
+  <div className="flex items-center justify-between">
+    <div>
+      <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-1">Price</p>
+      <div className="flex items-baseline gap-2">
+        <span className="text-3xl font-extrabold text-gray-900">
+          <Highlighter animationDuration={3000} isView iterations={8} action="underline" color="#3b3e33">{basePrice}</Highlighter>
+        </span>
+        <div>
+          {overnight && (
+            <span className="text-sm font-bold primary-text">+ £30</span>
+          )}
+        </div>
+      </div>
+    </div>
+    <span className="text-xs text-gray-400 font-medium text-right leading-relaxed">Includes delivery,<br/>setup & collection</span>
+  </div>
 
-                <div className="h-px bg-gray-100" />
+  <div className="h-px bg-[#d8dbca]" />
 
-                {/* Overnight toggle */}
-                <button
-                  onClick={() => setOvernight(!overnight)}
-                  className={`cursor-pointer flex items-center justify-between w-full px-4 py-3 rounded-2xl border-2 transition-all duration-200 ${
-                    overnight
-                      ? "border-pink-300 bg-pink-50"
-                      : "border-gray-100 hover:border-pink-200 hover:bg-pink-50/50"
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${overnight ? "bg-pink-200" : "bg-gray-100"}`}>
-                      <Moon className={`w-4 h-4 ${overnight ? "text-pink-600" : "text-gray-400"}`} />
-                    </div>
-                    <div className="text-left">
-                      <p className={`font-bold text-sm ${overnight ? "text-pink-600" : "text-gray-700"}`}>Overnight hire</p>
-                      <p className="text-xs text-gray-400">Collected next morning — +£30</p>
-                    </div>
-                  </div>
-                  {/* Toggle pill */}
-                  <div className={`w-10 h-6 rounded-full transition-colors duration-200 flex items-center px-1 ${overnight ? "bg-pink-400" : "bg-gray-200"}`}>
-                    <div className={`w-4 h-4 rounded-full bg-white shadow transition-transform duration-200 ${overnight ? "translate-x-4" : "translate-x-0"}`} />
-                  </div>
-                </button>
-              </div>
+  {/* Overnight toggle */}
+  <button
+    onClick={() => setOvernight(!overnight)}
+    className={`cursor-pointer flex items-center justify-between w-full px-4 py-3 rounded-2xl border transition-all duration-200 ${
+      overnight
+        ? "border-[#3b3e33] bg-[#3b3e33]/10"
+        : "border-[#d8dbca] hover:border-[#3b3e33]/40 hover:bg-[#3b3e33]/5"
+    }`}
+  >
+    <div className="flex items-center gap-3">
+      <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${overnight ? "bg-[#3b3e33]/20" : "bg-[#d8dbca]/50"}`}>
+        <Moon className={`w-4 h-4 ${overnight ? "text-[#3b3e33]" : "text-gray-400"}`} />
+      </div>
+      <div className="text-left">
+        <p className={`font-bold text-sm ${overnight ? "primary-text" : "text-gray-700"}`}>Overnight hire</p>
+        <p className="text-xs text-gray-400">Collected next morning — +£30</p>
+      </div>
+    </div>
+    {/* Toggle pill */}
+    <div className={`w-10 h-6 rounded-full transition-colors duration-200 flex items-center px-1 ${overnight ? "secondary-bg" : "bg-[#d8dbca]"}`}>
+      <div className={`w-4 h-4 rounded-full bg-white shadow transition-transform duration-200 ${overnight ? "translate-x-4" : "translate-x-0"}`} />
+    </div>
+  </button>
+</div>
 
               {/* Quick specs */}
               <div className="grid grid-cols-2 gap-3">
@@ -175,7 +175,7 @@ const DynamicProductPage = () => {
                   { icon: <Clock className="w-4 h-4" />, label: "Setup Time", value: castle.setupTime || "~30 minutes" },
                 ].map((spec, i) => (
                   <div key={i} className="bg-white rounded-2xl border border-gray-100 p-4 flex items-start gap-3">
-                    <span className="text-pink-400 mt-0.5">{spec.icon}</span>
+                    <span className="primary-text mt-0.5">{spec.icon}</span>
                     <div>
                       <p className="text-xs text-gray-400 font-semibold">{spec.label}</p>
                       <p className="text-sm font-bold text-gray-800">{spec.value}</p>
@@ -192,8 +192,8 @@ const DynamicProductPage = () => {
                     <ul className="flex flex-col gap-2">
                       {castle.suitableFor.map((item, i) => (
                         <li key={i} className="flex items-start gap-3 text-sm text-gray-600">
-                          <span className="w-5 h-5 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Check className="w-3 h-3 text-pink-500" />
+                          <span className="w-5 h-5 rounded-full primary-bg flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <Check className="w-3 h-3 text-primary" />
                           </span>
                           {item}
                         </li>
@@ -250,9 +250,9 @@ const DynamicProductPage = () => {
               </div>
 
               {/* Delivery info */}
-              <div className="bg-pink-50 rounded-2xl p-6 flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-pink-100 flex items-center justify-center flex-shrink-0">
-                  <Truck className="w-5 h-5 text-pink-500" />
+              <div className="primary-bg rounded-2xl p-6 flex gap-4">
+                <div className="w-10 h-10 rounded-xl bg-[#c1c3b9] flex items-center justify-center flex-shrink-0">
+                  <Truck className="w-5 h-5 primary-text" />
                 </div>
                 <div>
                   <h3 className="font-extrabold text-gray-900 text-sm mb-1">Delivery & Collection</h3>
@@ -337,10 +337,10 @@ const DynamicProductPage = () => {
     <section className="px-8 py-14">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center text-center gap-2 mb-10">
-            <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-              <span className="w-6 h-px bg-pink-400 inline-block" />
+            <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+              <span className="w-6 h-px secondary-bg inline-block" />
               Reviews
-              <span className="w-6 h-px bg-pink-400 inline-block" />
+              <span className="w-6 h-px secondary-bg inline-block" />
             </span>
             <h2 className="text-2xl font-extrabold text-gray-900">What Parents Are Saying</h2>
           </div>
@@ -386,7 +386,7 @@ const DynamicProductPage = () => {
                     <p className="font-extrabold text-gray-900 text-sm">{review.name}</p>
                     <p className="text-xs text-gray-400">{review.location}</p>
                   </div>
-                  <span className="text-xs font-bold text-pink-500 bg-pink-50 px-2.5 py-1 rounded-full">
+                  <span className="text-xs font-bold primary-text primary-bg px-2.5 py-1 rounded-full">
                     {review.event}
                   </span>
                 </div>
@@ -399,10 +399,10 @@ const DynamicProductPage = () => {
     <section className="px-8 py-14">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center text-center gap-2 mb-10">
-            <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-              <span className="w-6 h-px bg-pink-400 inline-block" />
+            <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+              <span className="w-6 h-px secondary-bg inline-block" />
               You Might Also Like
-              <span className="w-6 h-px bg-pink-400 inline-block" />
+              <span className="w-6 h-px secondary-bg inline-block" />
             </span>
             <h2 className="text-2xl font-extrabold text-gray-900">More Castles to Explore</h2>
           </div>
@@ -415,10 +415,10 @@ const DynamicProductPage = () => {
                 <a
                   key={i}
                   href={`/bouncy-castle/${c.id}`}
-                  className="bg-white rounded-3xl p-6 flex flex-col gap-4 border border-gray-100 hover:border-pink-200 hover:shadow-lg hover:shadow-pink-50 transition-all duration-300 group"
+                  className="bg-white rounded-3xl p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition-all duration-300 group"
                 >
                   {/* Emoji */}
-                  <div className="w-14 h-14 rounded-2xl bg-pink-50 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-200">
+                  <div className="w-14 h-14 rounded-2xl primary-bg flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-200">
                     {c.emoji}
                   </div>
 
@@ -461,42 +461,36 @@ function FAQItem({ faqs }) {
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <>
+    <div className="flex flex-col gap-3">
+      {faqs.map((faq, i) => {
+        const isOpen = openIndex === i;
+        return (
+          <div
+            key={i}
+            className={`rounded-2xl border transition-all duration-200 overflow-hidden bg-[#f8f9f2] ${
+              isOpen ? "border-[#3b3e33] shadow-sm" : "border-[#d8dbca] hover:border-[#3b3e33]/40"
+            }`}
+          >
+            <button
+              onClick={() => toggle(i)}
+              className="w-full flex items-center justify-between px-6 py-4 text-left gap-4"
+            >
+              <span className="font-bold text-sm text-gray-900">{faq.q}</span>
+              <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-200 ${
+                isOpen ? "secondary-bg secondary-text rotate-45" : "bg-[#d8dbca]/50 text-gray-500"
+              }`}>
+                +
+              </span>
+            </button>
 
-                {/* Accordion */}
-                <div className="flex flex-col gap-3">
-                    {faqs.map((faq, i) => {
-                        const isOpen = openIndex === i;
-                        return (
-                            <div
-                                key={i}
-                                className={`bg-white rounded-2xl border transition-all duration-200 overflow-hidden ${
-                                    isOpen ? "border-pink-300 shadow-md shadow-pink-50" : "border-gray-100 hover:border-pink-200"
-                                }`}
-                            >
-                                <button
-                                    onClick={() => toggle(i)}
-                                    className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
-                                >
-                                    <span className={`font-bold text-sm md:text-base transition-colors duration-200 ${isOpen ? "text-pink-500" : "text-gray-900"}`}>
-                                        {faq.q}
-                                    </span>
-                                    <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-200 ${
-                                        isOpen ? "bg-pink-500 text-white rotate-45" : "bg-gray-100 text-gray-400"
-                                    }`}>
-                                        +
-                                    </span>
-                                </button>
-
-                                <div className={`transition-all duration-300 ease-in-out ${isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
-                                    <p className="px-6 pb-5 text-gray-500 text-sm leading-relaxed">
-                                        {faq.a}
-                                    </p>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-                </>
+            <div className={`transition-all duration-300 ease-in-out ${isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+              <p className="px-6 pb-5 text-sm text-gray-500 leading-relaxed opacity-80">
+                {faq.a}
+              </p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }

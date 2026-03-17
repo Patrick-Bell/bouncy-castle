@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { AlertCircle, AlertTriangle, Download, Eye, File, LocateIcon, Search } from "lucide-react";
@@ -260,35 +260,35 @@ const RiskAssessmentPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-[#f8f9f2]"> {/* Slightly lighter than primary-bg for section contrast */}
             <Navbar />
 
-            <div className="relative bg-gradient-to-br from-pink-500 to-pink-600 overflow-hidden">
-                <div className="absolute top-0 right-0 w-80 h-80 bg-pink-400/30 rounded-full -translate-y-1/2 translate-x-1/3" />
-                <div className="absolute bottom-0 left-10 w-48 h-48 bg-pink-400/20 rounded-full translate-y-1/2" />
-                {/* Yellow accent blob */}
-                <div className="absolute top-8 right-1/3 w-20 h-20 bg-pink-300/30 rounded-full" />
+            {/* HERO - Now using Haze Charcoal */}
+            <div className="relative secondary-bg secondary-text overflow-hidden">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#f0f1e8]/10 rounded-full -translate-y-1/2 translate-x-1/3" />
+                <div className="absolute bottom-0 left-10 w-48 h-48 bg-[#f0f1e8]/5 rounded-full translate-y-1/2" />
+                <div className="absolute top-8 right-1/3 w-20 h-20 bg-[#f0f1e8]/10 rounded-full" />
 
                 <div className="relative max-w-5xl mx-auto px-8 py-20 flex flex-col gap-6">
                     <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center gap-2 text-white font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-white" />
-                        Your Safety Matters
+                    <span className="inline-flex items-center gap-2 text-[#f0f1e8] font-bold text-sm tracking-widest uppercase">
+                        <span className="w-6 h-px bg-[#f0f1e8]" />
+                        Legal
                     </span>
                     </div>
-                    <h1 className="text-6xl font-extrabold text-white tracking-tight leading-none">
+                    <h1 className="text-6xl font-extrabold text-[#f0f1e8] tracking-tight leading-none">
                         Safety & Risk <br />
-                        <span className="text-pink-300">Assessment.</span>
+                        <span className="opacity-60 font-extrabold text-[#f0f1e8]">Conditions.</span>
                     </h1>
-                    <p className="text-pink-100 text-lg max-w-xl leading-relaxed">
-                    As a family business, safety is our absolute priority. This document outlines all identified risks, our control measures, and our certifications. Available for download below.
+                    <p className="secondary-text/80 text-lg max-w-xl leading-relaxed">
+                        As a family business, safety is our absolute priority. This document outlines all identified risks, our control measures, and our certifications.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-1">
                         {["PIPA Certified", "£5M Public Liability", "PAT Tested", "Annually Reviewed"].map((b, i) => (
-                            <span key={i} className="bg-pink-50 border border-pink-100 text-pink-700 text-xs font-bold px-3 py-1.5 rounded-full">{b}</span>
+                            <span key={i} className="bg-white/10 border border-white/20 text-[#f0f1e8] text-xs font-bold px-3 py-1.5 rounded-full">{b}</span>
                         ))}
                     </div>
-                <p className="text-xs text-gray-300">Last updated: January 2025 · Bouncy Castle Hire, Surrey, UK</p>
+                    <p className="text-xs opacity-50">Last updated: January 2025 · Haze Events, UK</p>
                 </div>
             </div>
 
@@ -299,72 +299,56 @@ const RiskAssessmentPage = () => {
                     <div className="flex-1 flex flex-col gap-8 min-w-0">
 
                         {/* Warning box */}
-                        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 flex gap-4">
-                            <span className="text-2xl flex-shrink-0"><AlertTriangle className="text-amber-500" /></span>
+                        <div className="bg-amber-50 border border-amber-200/60 rounded-2xl p-5 flex gap-4">
+                            <span className="text-2xl flex-shrink-0"><AlertTriangle className="text-amber-600" /></span>
                             <div>
-                                <p className="font-bold text-amber-800 text-sm mb-1">Important Notice</p>
-                                <p className="text-amber-700 text-sm leading-relaxed">
-                                    By accepting a hire from us you confirm that you have read and understood this risk assessment. An adult supervisor must be present at all times. If you have any questions, call us on 07700 900 123 before your event.
+                                <p className="font-bold text-amber-900 text-sm mb-1">Important Notice</p>
+                                <p className="text-amber-800/80 text-sm leading-relaxed">
+                                    By accepting a hire from us you confirm that you have read and understood this risk assessment. An adult supervisor must be present at all times.
                                 </p>
                             </div>
                         </div>
 
-                        {/* Certifications */}
+                        {/* Certifications - Updated to earthy Haze tones */}
                         <div id="ra-certs" className="scroll-mt-20">
-                            <h2 className="font-extrabold text-gray-900 text-xl mb-4">Our Certifications & Documents</h2>
+                            <h2 className="font-extrabold primary-text text-xl mb-4">Our Certifications & Documents</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {certifications.map((cert, i) => (
-                                    <div key={i} className={`bg-gradient-to-br ${cert.color} border ${cert.border} rounded-3xl p-5 flex flex-col gap-3`}>
-                                        {/* Header */}
-                                        <div className="flex items-start justify-between gap-2">
-                                            <div>
-                                                <span className={`inline-block ${cert.badge} text-white text-xs font-bold px-2 py-0.5 rounded-full mb-2`}>
-                                                    {cert.expires ? `Expires ${cert.expires}` : "Current"}
-                                                </span>
-                                                <h3 className="font-extrabold text-gray-900 text-sm">{cert.name}</h3>
-                                                <p className="text-xs text-gray-500 mt-0.5">{cert.issuer}</p>
-                                            </div>
+                                    <div key={i} className={`bg-white border border-[#d8dbca] rounded-3xl p-5 flex flex-col gap-3 shadow-sm`}>
+                                        <div>
+                                            <span className={`inline-block secondary-bg secondary-text text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full mb-2`}>
+                                                {cert.expires ? `Expires ${cert.expires}` : "Current"}
+                                            </span>
+                                            <h3 className="font-extrabold primary-text text-sm">{cert.name}</h3>
+                                            <p className="text-xs text-gray-500 mt-0.5">{cert.issuer}</p>
                                         </div>
 
-                                        {/* Placeholder image */}
-                                        <div className="w-full h-36 bg-white rounded-2xl border border-white/60 flex flex-col items-center justify-center gap-2 text-gray-300">
-                                            <div className="text-4xl">📄</div>
-                                            <p className="text-xs font-semibold text-gray-400">Placeholder</p>
-                                            <p className="text-xs text-gray-300">Placeholder</p>
+                                        <div className="w-full h-36 bg-[#f0f1e8] rounded-2xl border border-[#d8dbca]/50 flex flex-col items-center justify-center gap-2 text-gray-400">
+                                            <File size={32} strokeWidth={1.5} />
+                                            <p className="text-[10px] font-bold uppercase tracking-widest">Document Preview</p>
                                         </div>
 
                                         <p className="text-xs text-gray-500 leading-relaxed">{cert.description}</p>
 
-                                        {/* Issued date + download */}
-                                        <div className="flex items-center justify-between gap-2 pt-1 border-t border-white/50">
+                                        <div className="flex items-center justify-between gap-2 pt-1 border-t border-gray-100">
                                             <span className="text-xs text-gray-400">Issued: {cert.date}</span>
-                                            <a
-                                                href="#"
-                                                onClick={(e) => e.preventDefault()}
-                                                className="inline-flex items-center gap-1.5 bg-white text-gray-700 text-xs font-bold px-3 py-1.5 rounded-lg hover:bg-gray-50 border border-gray-200 transition-colors"
-                                                title="PDF not yet uploaded — replace href with actual file path"
-                                            >
-                                                <Download className="w-5 h-4" /> Download PDF
-                                            </a>
+                                            <button className="inline-flex items-center gap-1.5 primary-bg primary-text text-xs font-bold px-3 py-1.5 rounded-lg border border-[#d8dbca] hover:bg-[#d8dbca] transition-colors">
+                                                <Download size={14} /> Download
+                                            </button>
                                         </div>
                                     </div>
                                 ))}
                             </div>
 
                             {/* Download all */}
-                            <div className="mt-4 bg-white border border-gray-100 rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div className="mt-4 bg-[#3b3e33] rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
                                 <div>
-                                    <p className="font-bold text-gray-800 text-sm">Download Full Risk Assessment</p>
-                                    <p className="text-gray-400 text-xs mt-0.5">Complete document including all sections, suitable for venues and event organisers.</p>
+                                    <p className="font-bold text-[#f0f1e8] text-sm">Download Full Risk Assessment</p>
+                                    <p className="text-[#f0f1e8]/60 text-xs mt-0.5">Complete document for venues and event organisers.</p>
                                 </div>
-                                <a
-                                    href="#"
-                                    onClick={(e) => e.preventDefault()}
-                                    className="flex-shrink-0 inline-flex items-center gap-2 bg-pink-500 text-white font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-pink-600 transition-colors"
-                                    title="Replace href with path to your PDF"
-                                >
-                                    <Download className="w-5 h-4" /> Full Risk Assessment PDF
-                                </a>
+                                <button className="flex-shrink-0 inline-flex items-center gap-2 bg-[#f0f1e8] text-[#3b3e33] font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-white transition-colors">
+                                    <Download size={16} /> Full PDF Bundle
+                                </button>
                             </div>
                         </div>
 
@@ -373,21 +357,21 @@ const RiskAssessmentPage = () => {
                             <div
                                 key={section.id}
                                 id={`ra-${section.id}`}
-                                className="bg-white rounded-3xl border border-gray-100 p-7 flex flex-col gap-5 scroll-mt-15"
+                                className="bg-white rounded-3xl border border-[#d8dbca]/50 p-7 flex flex-col gap-5 scroll-mt-15 shadow-sm"
                             >
                                 <div className="flex items-center gap-3">
-                                    <div className="w-11 h-11 rounded-2xl bg-pink-50 border border-pink-100 flex items-center justify-center text-xl flex-shrink-0">
-                                        {section.icon}
+                                    <div className="w-11 h-11 rounded-2xl bg-[#f0f1e8] border border-[#d8dbca] flex items-center justify-center text-[#3b3e33] flex-shrink-0">
+                                        {/* Force Lucide icons to inherit charcoal color */}
+                                        {React.cloneElement(section.icon, { className: "text-[#3b3e33]" })}
                                     </div>
-                                    <h2 className="font-extrabold text-gray-900 text-lg">{section.title}</h2>
+                                    <h2 className="font-extrabold primary-text text-lg">{section.title}</h2>
                                 </div>
 
-                                {/* Regular item list */}
                                 {section.items && (
                                     <ul className="flex flex-col gap-3">
                                         {section.items.map((item, j) => (
-                                            <li key={j} className="flex items-start gap-3 text-sm text-gray-500 leading-relaxed">
-                                                <span className="w-5 h-5 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">
+                                            <li key={j} className="flex items-start gap-3 text-sm text-gray-600 leading-relaxed">
+                                                <span className="w-5 h-5 rounded-full secondary-bg secondary-text flex items-center justify-center flex-shrink-0 text-[10px] font-bold mt-0.5">
                                                     {j + 1}
                                                 </span>
                                                 {item}
@@ -396,26 +380,23 @@ const RiskAssessmentPage = () => {
                                     </ul>
                                 )}
 
-                                {/* Risk table */}
                                 {section.risks && (
                                     <div className="flex flex-col gap-4">
                                         {section.risks.map((risk, ri) => (
-                                            <div key={ri} className="border border-gray-100 rounded-2xl overflow-hidden">
-                                                <div className="bg-gray-50 px-5 py-3 flex flex-wrap items-center gap-3">
-                                                    <span className="font-bold text-gray-800 text-sm flex-1">{risk.hazard}</span>
+                                            <div key={ri} className="border border-[#d8dbca] rounded-2xl overflow-hidden">
+                                                <div className="bg-[#f0f1e8]/50 px-5 py-3 flex flex-wrap items-center gap-3">
+                                                    <span className="font-bold primary-text text-sm flex-1">{risk.hazard}</span>
                                                     <div className="flex items-center gap-2">
-                                                        <span className="text-xs text-gray-400">Likelihood:</span>
-                                                        <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${riskColor(risk.likelihood)}`}>{risk.likelihood}</span>
-                                                        <span className="text-xs text-gray-400 ml-1">Severity:</span>
-                                                        <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${riskColor(risk.severity)}`}>{risk.severity}</span>
+                                                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${riskColor(risk.likelihood)}`}>{risk.likelihood}</span>
+                                                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${riskColor(risk.severity)}`}>{risk.severity}</span>
                                                     </div>
                                                 </div>
-                                                <div className="px-5 py-3">
-                                                    <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">Persons at risk: {risk.persons}</p>
+                                                <div className="px-5 py-3 bg-white">
+                                                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Target: {risk.persons}</p>
                                                     <ul className="flex flex-col gap-1.5">
                                                         {risk.controls.map((ctrl, ci) => (
                                                             <li key={ci} className="flex items-start gap-2 text-sm text-gray-500">
-                                                                <span className="text-emerald-500 flex-shrink-0 mt-0.5">✓</span>
+                                                                <span className="text-[#3b3e33] flex-shrink-0 mt-0.5 font-bold">·</span>
                                                                 {ctrl}
                                                             </li>
                                                         ))}
@@ -427,59 +408,29 @@ const RiskAssessmentPage = () => {
                                 )}
                             </div>
                         ))}
-
-                        {/* Footer */}
-                        <div className="bg-gray-100 rounded-2xl p-5 text-center flex flex-col gap-2">
-                            <p className="text-gray-500 text-xs font-bold uppercase tracking-wide">Document Information</p>
-                            <p className="text-gray-400 text-xs">
-                                Last reviewed: <strong className="text-gray-500">January 2025</strong> · Next review due: <strong className="text-gray-500">January 2026</strong>
-                            </p>
-                            <p className="text-gray-400 text-xs">
-                                For a printed copy or to request documentation for your venue, email <strong className="text-gray-500">hello@bouncycastle.co.uk</strong>
-                            </p>
-                        </div>
                     </div>
 
-                    {/* Sticky right nav */}
+                    {/* Sticky Sidebar */}
                     <aside className="hidden lg:flex flex-col gap-1 sticky top-20 w-52 flex-shrink-0">
-                        <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 px-3">On this page</p>
-
-                        {/* Certifications link */}
-                        <button
-                            onClick={() => scrollTo("certs")}
-                            className={`text-left text-xs px-3 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center gap-2.5 group w-full
-                                ${activeId === "certs" ? "bg-pink-50 text-pink-500" : "text-gray-400 hover:text-gray-700 hover:bg-gray-100"}`}
-                        >
-                            <span className={`w-0.5 h-4 rounded-full flex-shrink-0 transition-all duration-200 ${activeId === "certs" ? "bg-pink-500" : "bg-gray-200 group-hover:bg-gray-300"}`} />
-                            Certifications
-                        </button>
-
+                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-3">On this page</p>
                         {sections.map(({ id, title }) => {
                             const isActive = activeId === id;
                             return (
                                 <button
                                     key={id}
                                     onClick={() => scrollTo(id)}
-                                    className={`text-left text-xs px-3 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center gap-2.5 group w-full
-                                        ${isActive ? "bg-pink-50 text-pink-500" : "text-gray-400 hover:text-gray-700 hover:bg-gray-100"}`}
+                                    className={`text-left text-xs px-3 py-2 rounded-lg font-bold transition-all duration-200 flex items-center gap-2.5 group w-full
+                                        ${isActive
+                                            ? "bg-[#3b3e33] text-[#f0f1e8]"
+                                            : "text-gray-400 hover:text-[#3b3e33] hover:bg-[#f0f1e8]"
+                                        }`}
                                 >
-                                    <span className={`w-0.5 h-4 rounded-full flex-shrink-0 transition-all duration-200 ${isActive ? "bg-pink-500" : "bg-gray-200 group-hover:bg-gray-300"}`} />
-                                    {title}
+                                    <span className={`w-0.5 h-4 rounded-full flex-shrink-0 transition-all duration-200 ${isActive ? "bg-[#f0f1e8]" : "bg-gray-200 group-hover:bg-gray-300"}`} />
+                                    {title.replace(/^\d+\.\s/, "")}
                                 </button>
                             );
                         })}
-
-                        <div className="mt-4 pt-4 border-t border-gray-100 px-3">
-                            <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="w-full flex items-center justify-center gap-1.5 bg-pink-500 text-white font-bold text-xs px-3 py-2.5 rounded-xl hover:bg-pink-600 transition-colors"
-                            >
-                                <Download className="w-5 h-4" /> Download PDF
-                            </a>
-                        </div>
                     </aside>
-
                 </div>
             </div>
         </div>

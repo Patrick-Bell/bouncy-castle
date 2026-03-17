@@ -1,54 +1,62 @@
+import image1 from '../../assets/bumper-cars.png'
+import image2 from '../../assets/white-bouncy-castle.png'
+import logo from '../../assets/logo.jpg'
+import image3 from '../../assets/soft-play.png'
+import { Balloon, Castle, Computer, Instagram } from 'lucide-react';
+import { BsInstagram } from 'react-icons/bs';
+import { MdSafetyCheck } from 'react-icons/md';
+
 const awards = [
     {
-        year: "2024",
-        icon: "🏆",
-        title: "Best Family Business",
-        body: "Surrey Small Business Awards — recognised for outstanding customer experience and community impact.",
+        year: 'April, 2026',
+        icon: <Computer />,
+        title: 'Website Launched',
+        body: 'We launched our user-friendly website, making it easy for families to browse our bouncy castle options, check availability, and book their next unforgettable party with just a few clicks.',
     },
     {
-        year: "2023",
-        icon: "⭐",
-        title: "Top Rated Hire Company",
-        body: "Awarded by Bark.com with a consistent 5-star rating across over 150 verified reviews.",
+        year: "March, 2026",
+        icon: <Balloon />,
+        title: "First Booking",
+        body: "Our first booking was a birthday party for a local family, and it was a huge success! Seeing the kids' faces light up as they bounced around was the moment we knew we were onto something special.",
     },
     {
-        year: "2023",
-        icon: "🛡️",
-        title: "PIPA Safety Excellence",
-        body: "All equipment passed PIPA inspection with highest safety marks for the third consecutive year.",
+        year: "February, 2026",
+        icon: <MdSafetyCheck />,
+        title: "Safety Approved",
+        body: "All our equipment passed the PIPA safety inspection, giving families peace of mind that our bouncy castles are fully safe and ready for fun.",
     },
     {
-        year: "2022",
-        icon: "💛",
-        title: "Loved by Locals",
-        body: "Voted #1 bouncy castle hire in South London by readers of the Local Family Magazine.",
+        year: "February, 2026",
+        icon: <BsInstagram />,
+        title: "Social Media Launched",
+        body: "We launched our Instagram and Facebook pages, sharing behind-the-scenes moments, customer stories, and fun party ideas with our growing online community.",
     },
     {
-        year: "2021",
-        icon: "🌟",
-        title: "Netmums Recommended",
-        body: "Featured and recommended by Netmums as a trusted, family-run party supplier.",
+        year: "January, 2026",
+        icon: <Castle />,
+        title: "Founded",
+        body: "Our journey began with a simple mission: to bring joy and unforgettable memories to families across South London through our fun and safe bouncy castle rentals.",
     },
 ];
 
 const photos = [
     {
-        src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+        src: logo,
         alt: "Kids on bouncy castle",
         span: "row-span-2",
     },
     {
-        src: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80",
+        src: image2,
         alt: "Bouncy castle at a party",
         span: "",
     },
     {
-        src: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=600&q=80",
+        src: image1,
         alt: "Happy children playing",
         span: "",
     },
     {
-        src: "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=600&q=80",
+        src: image3,
         alt: "Birthday party fun",
         span: "",
     },
@@ -103,7 +111,16 @@ const Awards = () => {
                     </div>
 
                     {/* Right: Photo grid */}
-                    <div className="flex-1 grid grid-cols-2 grid-rows-3 gap-4 h-[520px]">
+                    <div className="flex lg:hidden w-full">
+                            <img
+                                src={photos[0].src}
+                                alt={photos[0].alt}
+                                className="w-full h-full object-cover rounded-lg"
+                            />
+                        </div>
+
+
+                    <div className="hidden flex-1 lg:grid grid-cols-2 grid-rows-3 gap-4 h-[520px]">
                         {/* Large left image spanning 2 rows */}
                         <div className="row-span-2 rounded-3xl overflow-hidden">
                             <img

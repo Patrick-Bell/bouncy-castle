@@ -5,7 +5,6 @@ import Footer from "../Footer/Footer";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { BsInstagram } from "react-icons/bs";
 
-// Flatten all images from all castles into one array with castle name attached
 const allImages = castles.flatMap((castle) =>
     (castle.images || []).map((src) => ({
         src,
@@ -15,8 +14,6 @@ const allImages = castles.flatMap((castle) =>
     }))
 );
 
-// Bento pattern — repeats every 5 tiles
-// lg = large (2 cols, 2 rows), t = tall (1 col, 2 rows), w = wide (2 cols, 1 row), s = small (1 col, 1 row)
 const bentoPattern = ["lg", "s", "s", "t", "w", "s", "s", "lg", "w", "t"];
 
 const tileClass = (type) => {
@@ -29,14 +26,13 @@ const tileClass = (type) => {
 };
 
 const GalleryPage = () => {
-    const [lightbox, setLightbox] = useState(null); // index into allImages
+    const [lightbox, setLightbox] = useState(null);
 
     const openLightbox = (i) => setLightbox(i);
     const closeLightbox = () => setLightbox(null);
     const prev = () => setLightbox((i) => (i - 1 + allImages.length) % allImages.length);
     const next = () => setLightbox((i) => (i + 1) % allImages.length);
 
-    // Keyboard nav
     const handleKey = (e) => {
         if (e.key === "ArrowLeft") prev();
         if (e.key === "ArrowRight") next();
@@ -52,13 +48,13 @@ const GalleryPage = () => {
 
                 {/* Header */}
                 <div className="flex flex-col items-center text-center gap-3 mb-14">
-                    <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-pink-400 inline-block" />
+                    <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+                        <span className="w-6 h-px bg-[#3b3e33] inline-block" />
                         Gallery
-                        <span className="w-6 h-px bg-pink-400 inline-block" />
+                        <span className="w-6 h-px bg-[#3b3e33] inline-block" />
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
-                        See them in <span className="text-pink-500">action</span>
+                        See them in <span className="primary-text">action</span>
                     </h2>
                     <p className="text-gray-400 text-base max-w-md">
                         Real castles, real parties, real fun. Browse our full collection below.
@@ -80,14 +76,13 @@ const GalleryPage = () => {
                                 <div
                                     key={i}
                                     onClick={() => openLightbox(i)}
-                                    className={`${tileClass(type)} relative rounded-3xl overflow-hidden cursor-pointer group bg-pink-50`}
+                                    className={`${tileClass(type)} relative rounded-3xl overflow-hidden cursor-pointer group bg-[#f8f9f2]`}
                                 >
                                     <img
                                         src={img.src}
                                         alt={img.castle}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
-                                    {/* Hover overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                         <div className="flex items-center gap-2">
                                             <span className="text-lg">{img.emoji}</span>
@@ -101,26 +96,27 @@ const GalleryPage = () => {
                 )}
 
                 {/* Instagram CTA */}
-                <div className="mt-16 bg-pink-50 rounded-3xl p-8 flex flex-col items-center text-center gap-4">
-                <span className="text-3xl"><BsInstagram className="text-pink-500 w-15 h-15" /></span>
-                <h3 className="text-xl font-extrabold text-gray-900">See even more on Instagram</h3>
+                <div className="mt-16 bg-[#f8f9f2] border border-[#d8dbca] rounded-3xl p-8 flex flex-col items-center text-center gap-4">
+                    <span className="text-3xl"><BsInstagram className="primary-text w-15 h-15" /></span>
+                    <h3 className="text-xl font-extrabold text-gray-900">See even more on Instagram</h3>
                     <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
                         We post photos from every hire on our Instagram. Follow us for party inspiration and to see our castles in real gardens.
                     </p>
                     <a
-                        href="https://instagram.com/yourhandle"
+                    
+                        href="https://www.instagram.com/haze_events26/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-6 py-3 rounded-xl bg-pink-500 text-white font-extrabold text-sm hover:bg-pink-600 transition-all shadow-md shadow-pink-200"
+                        className="px-6 py-3 rounded-xl secondary-bg secondary-text font-extrabold text-sm hover:opacity-90 transition-all"
                     >
-                        Follow us @yourhandle
+                        Follow us @haze_events26
                     </a>
                 </div>
 
             </div>
         </section>
 
-        {/* Lightbox */}
+        {/* Lightbox — unchanged, dark overlay looks good as-is */}
         {lightbox !== null && (
             <div
                 className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-500/80 backdrop-blur-xs cursor-pointer"
@@ -128,7 +124,6 @@ const GalleryPage = () => {
                 onKeyDown={handleKey}
                 tabIndex={-1}
             >
-                {/* Close */}
                 <button
                     onClick={closeLightbox}
                     className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors z-10"
@@ -136,7 +131,6 @@ const GalleryPage = () => {
                     <X className="w-5 h-5 text-white" />
                 </button>
 
-                {/* Prev */}
                 <button
                     onClick={(e) => { e.stopPropagation(); prev(); }}
                     className="absolute left-4 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors z-10"
@@ -144,14 +138,12 @@ const GalleryPage = () => {
                     <ChevronLeft className="w-6 h-6 text-white" />
                 </button>
 
-                {/* Image */}
                 <div onClick={(e) => e.stopPropagation()} className="relative max-w-4xl max-h-[85vh] w-full flex flex-col items-center gap-4">
                     <img
                         src={allImages[lightbox].src}
                         alt={allImages[lightbox].castle}
                         className="max-h-[78vh] max-w-full rounded-2xl object-contain shadow-2xl"
                     />
-                    {/* Caption */}
                     <div className="flex items-center gap-2">
                         <span className="text-xl">{allImages[lightbox].emoji}</span>
                         <p className="text-white font-bold text-sm">{allImages[lightbox].castle}</p>
@@ -159,7 +151,6 @@ const GalleryPage = () => {
                     </div>
                 </div>
 
-                {/* Next */}
                 <button
                     onClick={(e) => { e.stopPropagation(); next(); }}
                     className="absolute right-4 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors z-10"
@@ -167,7 +158,6 @@ const GalleryPage = () => {
                     <ChevronRight className="w-6 h-6 text-white" />
                 </button>
 
-                {/* Dot indicators */}
                 <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-1.5">
                     {allImages.map((_, i) => (
                         <button

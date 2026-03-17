@@ -51,56 +51,56 @@ const WeatherModal = ({ trigger }) => {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger>
-            <span className="underline font-bold text-pink-500 cursor-pointer hover:text-pink-600 transition-colors">here</span>            
+            <span className="underline font-bold cursor-pointer primary-text transition-colors">here</span>            
             </DialogTrigger>
 
             <DialogContent className="max-w-md p-0 gap-0 rounded-3xl overflow-hidden max-h-[90vh] flex flex-col">
 
                 {/* ── Pink hero header ── */}
-                <div className="bg-gradient-to-br from-pink-500 to-pink-600 px-7 pt-7 pb-6 relative overflow-hidden flex-shrink-0">
-                    <div className="absolute top-0 right-0 w-36 h-36 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-                    <div className="absolute bottom-0 left-1/4 w-16 h-16 bg-yellow-300/20 rounded-full translate-y-1/2 pointer-events-none" />
+                {/* ── Hero header ── */}
+<div className="secondary-bg px-7 pt-7 pb-6 relative overflow-hidden flex-shrink-0">
+    <div className="absolute top-0 right-0 w-36 h-36 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+    <div className="absolute bottom-0 left-1/4 w-16 h-16 bg-white/5 rounded-full translate-y-1/2 pointer-events-none" />
 
-                    <DialogHeader className="relative text-left space-y-0">
-                        <div className="flex items-start justify-between gap-4">
-                            <div className="flex-1 min-w-0 pt-0.5">
-                                <p className="text-pink-200 text-xs font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5">
-                                    <MapPin className="w-3 h-3" />
-                                    {weather?.location?.name ?? LOCATION}
-                                    {weather?.location?.region ? `, ${weather.location.region.split(",")[0]}` : ""}
-                                </p>
-                                <DialogTitle className="text-2xl font-extrabold text-white leading-tight">
-                                    Is it castle weather?
-                                </DialogTitle>
-                                <p className="text-pink-200 text-xs mt-1">
-                                    {weather?.location?.localtime
-                                        ? `Updated ${weather.location.localtime.split(" ")[1]}`
-                                        : "3-day forecast"}
-                                </p>
-                            </div>
-                            {current && (
-                                <img
-                                    src={`https:${current.condition.icon}`}
-                                    alt={current.condition.text}
-                                    className="w-16 h-16 flex-shrink-0 drop-shadow"
-                                />
-                            )}
-                        </div>
+    <DialogHeader className="relative text-left space-y-0">
+        <div className="flex items-start justify-between gap-4">
+            <div className="flex-1 min-w-0 pt-0.5">
+                <p className="secondary-text opacity-70 text-xs font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5">
+                    <MapPin className="w-3 h-3" />
+                    {weather?.location?.name ?? LOCATION}
+                    {weather?.location?.region ? `, ${weather.location.region.split(",")[0]}` : ""}
+                </p>
+                <DialogTitle className="text-2xl font-extrabold secondary-text leading-tight">
+                    Is it castle weather?
+                </DialogTitle>
+                <p className="secondary-text opacity-60 text-xs mt-1">
+                    {weather?.location?.localtime
+                        ? `Updated ${weather.location.localtime.split(" ")[1]}`
+                        : "3-day forecast"}
+                </p>
+            </div>
+            {current && (
+                <img
+                    src={`https:${current.condition.icon}`}
+                    alt={current.condition.text}
+                    className="w-16 h-16 flex-shrink-0 drop-shadow"
+                />
+            )}
+        </div>
 
-                        {/* Current temp */}
-                        {current && (
-                            <div className="flex items-end gap-3 mt-4">
-                                <span className="text-5xl font-extrabold text-white leading-none">
-                                    {Math.round(current.temp_c)}°
-                                </span>
-                                <div className="mb-1">
-                                    <p className="text-white font-bold text-sm">{current.condition.text}</p>
-                                    <p className="text-pink-200 text-xs">Feels like {Math.round(current.feelslike_c)}°</p>
-                                </div>
-                            </div>
-                        )}
-                    </DialogHeader>
+        {current && (
+            <div className="flex items-end gap-3 mt-4">
+                <span className="text-5xl font-extrabold secondary-text leading-none">
+                    {Math.round(current.temp_c)}°
+                </span>
+                <div className="mb-1">
+                    <p className="secondary-text font-bold text-sm">{current.condition.text}</p>
+                    <p className="secondary-text opacity-60 text-xs">Feels like {Math.round(current.feelslike_c)}°</p>
                 </div>
+            </div>
+        )}
+    </DialogHeader>
+</div>
 
                 <div className="flex-1 overflow-y-auto px-6 py-5 flex flex-col gap-5">
 
@@ -136,11 +136,11 @@ const WeatherModal = ({ trigger }) => {
                                                 onClick={() => setSelected(i)}
                                                 className={`cursor-pointer flex flex-col items-center gap-1.5 px-3 py-3 rounded-2xl border-2 transition-all duration-200 ${
                                                     isSelected
-                                                        ? "border-pink-400 bg-pink-50 shadow-md shadow-pink-100"
-                                                        : "border-gray-100 bg-white hover:border-pink-200"
+                                                        ? "border-[#3b3e33] bg-[#3b3e33]/10 shadow-sm"
+                                                        : "border-[#d8dbca] bg-[#f8f9f2] hover:border-[#3b3e33]/40"
                                                 }`}
                                             >
-                                                <p className={`text-xs font-bold ${isSelected ? "text-pink-500" : "text-gray-400"}`}>
+                                                <p className={`text-xs font-bold ${isSelected ? "primart-text" : "text-gray-400"}`}>
                                                     {formatDay(day.date, i)}
                                                 </p>
                                                 <img src={`https:${day.day.condition.icon}`} alt="" className="w-8 h-8" />
@@ -209,12 +209,12 @@ const WeatherModal = ({ trigger }) => {
 
                 <div className="flex-shrink-0 border-t border-gray-100 px-6 py-4 bg-white">
                     <DialogClose asChild>
-                        <Button
-                            variant="outline"
-                            className="w-full border-gray-200 font-bold rounded-xl h-11 text-sm hover:border-pink-300 hover:text-pink-500 transition-all cursor-pointer"
-                        >
-                            Close
-                        </Button>
+                    <Button
+                        variant="outline"
+                        className="w-full border-[#d8dbca] font-bold rounded-xl h-11 text-sm hover:border-[#3b3e33] hover:primary-text transition-all cursor-pointer"
+                    >
+                        Close
+                    </Button>
                     </DialogClose>
                 </div>
 

@@ -198,11 +198,6 @@
   @apply bg-[#ebeddf];
 }
 
-.primary-bg:hover {
-  @apply bg-[#ebeddf];
-
-}
-
 .secondary-bg {
   @apply bg-[#3b3e33];
 }

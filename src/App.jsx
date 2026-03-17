@@ -27,19 +27,25 @@ const ScrollToTop = () => {
 const getMetaData = (path) => {
   switch (path) {
     case '/':
-      return { title: 'Bouncy Castle Hire | Home', description: 'Hire fun bouncy castles for parties and events in your area.' };
+      return { title: 'Haze Events | Home', description: 'Hire fun bouncy castles for parties and events in your area.' };
     case '/terms-and-conditions':
-      return { title: 'Terms & Conditions', description: 'Our rental terms and safety guidelines.' };
+      return { title: 'Haze Events | Terms & Conditions', description: 'Our rental terms and safety guidelines.' };
     case '/risk-assessments':
-      return { title: 'Risk Assessments', description: 'Learn about safety and risk management for our inflatables.' };
-    case '/faq':
-      return { title: 'FAQ', description: 'Frequently asked questions about hiring our bouncy castles.' };
+      return { title: 'Haze Events | Risk Assessments', description: 'Learn about safety and risk management for our inflatables.' };
+    case '/frequently-asked-questions':
+      return { title: 'Haze Events | FAQ', description: 'Frequently asked questions about hiring our bouncy castles.' };
     case '/bouncy-castles':
-      return { title: 'Our Inflatables', description: 'Browse our selection of bouncy castles available for hire.' };
+      return { title: 'Haze Events | Our Inflatables', description: 'Browse our selection of bouncy castles available for hire.' };
     case '/contact':
-      return { title: 'Contact Us', description: 'Get in touch to book your bouncy castle.' };
+      return { title: 'Haze Events | Contact Us', description: 'Get in touch to book your bouncy castle.' };
+    case '/gallery':
+      return { title: 'Haze Events | Gallery', description: 'See our bouncy castles in action at real events.' };
+    case '/payments':
+      return { title: 'Haze Events | Payment Information', description: 'Learn about our payment options and policies.' };
+    case '/not-found':
+      return { title: 'Haze Events | Page Not Found', description: 'The page you are looking for does not exist.' };
     default:
-      return { title: 'Bouncy Castle Hire', description: 'Hire fun inflatables for parties and events.' };
+      return { title: 'Haze Events', description: 'Hire fun inflatables for parties and events.' };
   }
 };
 

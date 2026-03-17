@@ -1,21 +1,20 @@
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import { Check, Truck, Moon, Clock, CloudRain, RefreshCw, AlertTriangle, CreditCard, Building2, Smartphone, Wallet, Bubbles } from "lucide-react";
+import { Check, Truck, Moon, Clock, CloudRain, RefreshCw, AlertTriangle, CreditCard, Bubbles } from "lucide-react";
 import { FaPaypal } from "react-icons/fa";
 import { BsBank2, BsCash, BsCreditCard } from "react-icons/bs";
 
-
 const paymentMethods = [
-    { name: "PayPal", icon: <FaPaypal className="text-pink-300" />, desc: "Pay securely via PayPal" },
-    { name: "Bank Transfer", icon: <BsBank2 className="text-pink-300" />, desc: "Direct to our account" },
-    { name: "Cash", icon: <BsCash className="text-pink-300" />, desc: "On the day of delivery" },
-    { name: "Card", icon: <BsCreditCard className="text-pink-300"/>, desc: "Visa, Mastercard & Amex" },
+    { name: "PayPal", icon: <FaPaypal className="text-[#3b3e33]" />, desc: "Pay securely via PayPal" },
+    { name: "Bank Transfer", icon: <BsBank2 className="text-[#3b3e33]" />, desc: "Direct to our account" },
+    { name: "Cash", icon: <BsCash className="text-[#3b3e33]" />, desc: "On the day of delivery" },
+    { name: "Card", icon: <BsCreditCard className="text-[#3b3e33]"/>, desc: "Visa, Mastercard & Amex" },
 ];
 
 const pricingItems = [
     {
-        icon: <CreditCard className="w-5 h-5 text-pink-500" />,
-        bg: "bg-pink-50",
+        icon: <CreditCard className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Booking Deposit",
         amount: "20%",
         amountSub: "of total hire fee",
@@ -23,8 +22,8 @@ const pricingItems = [
         tag: null,
     },
     {
-        icon: <Check className="w-5 h-5 text-green-500" />,
-        bg: "bg-green-50",
+        icon: <Check className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Remaining Balance",
         amount: "80%",
         amountSub: "on the day",
@@ -32,8 +31,8 @@ const pricingItems = [
         tag: null,
     },
     {
-        icon: <Moon className="w-5 h-5 text-purple-500" />,
-        bg: "bg-purple-50",
+        icon: <Moon className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Overnight Hire",
         amount: "+£30",
         amountSub: "per night",
@@ -41,8 +40,8 @@ const pricingItems = [
         tag: "Add-on",
     },
     {
-        icon: <Truck className="w-5 h-5 text-blue-500" />,
-        bg: "bg-blue-50",
+        icon: <Truck className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Delivery",
         amount: "Free",
         amountSub: "within 10 miles",
@@ -50,8 +49,8 @@ const pricingItems = [
         tag: null,
     },
     {
-        icon: <Clock className="w-5 h-5 text-amber-500" />,
-        bg: "bg-amber-50",
+        icon: <Clock className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Late Collection Fee",
         amount: "+£25",
         amountSub: "per hour",
@@ -59,44 +58,44 @@ const pricingItems = [
         tag: "If applicable",
     },
     {
-        icon: <AlertTriangle className="w-5 h-5 text-red-400" />,
-        bg: "bg-red-50",
+        icon: <AlertTriangle className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Damage / Cleaning",
         amount: "£25–£150",
         amountSub: "if required",
-        description: "We inspect all equipment on collection. Excessive dirt or damage beyond fair wear and tear will be charged at cost. We'll always notify you before invoicing.",
+        description: "We inspect all equipment on collection. Excessive dirt or damage beyond fair wear and tear will be charged at cost.",
         tag: "If applicable",
     },
 ];
 
 const refundPolicies = [
     {
-        icon: <CloudRain className="w-5 h-5 text-blue-500" />,
-        bg: "bg-blue-50",
+        icon: <CloudRain className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Bad Weather",
-        description: "If we're unable to set up due to unsafe wind speeds (over 24mph) or severe weather, you'll receive a full refund including your deposit — or a free reschedule, whichever you prefer.",
+        description: "If we're unable to set up due to unsafe wind speeds (over 24mph) or severe weather, you'll receive a full refund including your deposit.",
     },
     {
-        icon: <RefreshCw className="w-5 h-5 text-green-500" />,
-        bg: "bg-green-50",
+        icon: <RefreshCw className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Cancellation (14+ days)",
-        description: "Cancel more than 14 days before your hire date and we'll refund your deposit in full, no questions asked. Refunds are processed within 5 working days.",
+        description: "Cancel more than 14 days before your hire date and we'll refund your deposit in full, no questions asked.",
     },
     {
-        icon: <AlertTriangle className="w-5 h-5 text-amber-500" />,
-        bg: "bg-amber-50",
+        icon: <AlertTriangle className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Cancellation (7–14 days)",
-        description: "Cancellations between 7 and 14 days before your hire date will forfeit the deposit. We'll always try to work with you if something unexpected comes up.",
+        description: "Cancellations between 7 and 14 days before your hire date will forfeit the deposit. We'll always try to work with you.",
     },
     {
-        icon: <AlertTriangle className="w-5 h-5 text-red-400" />,
-        bg: "bg-red-50",
+        icon: <AlertTriangle className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Cancellation (under 7 days)",
-        description: "Cancellations within 7 days may be charged up to 50% of the total hire fee. Within 48 hours, the full hire fee applies — except in genuine emergencies, which we'll consider individually.",
+        description: "Cancellations within 7 days may be charged up to 50% of the total hire fee. Within 48 hours, the full hire fee applies.",
     },
     {
-        icon: <RefreshCw className="w-5 h-5 text-pink-500" />,
-        bg: "bg-pink-50",
+        icon: <RefreshCw className="w-5 h-5 text-[#3b3e33]" />,
+        bg: "bg-[#f0f1e8]",
         title: "Our Cancellation",
         description: "In the rare event we have to cancel (illness, equipment failure, emergency), you'll receive a full refund including deposit within 5 working days.",
     },
@@ -104,28 +103,28 @@ const refundPolicies = [
 
 const PaymentsPage = () => {
     return (
-        <>
+        <div className="bg-[#f8f9f2] min-h-screen">
             <Navbar />
 
-            {/* Hero */}
-            <div className="relative bg-gradient-to-br from-pink-500 to-pink-600 overflow-hidden">
-                <div className="absolute top-0 right-0 w-80 h-80 bg-pink-400/30 rounded-full -translate-y-1/2 translate-x-1/3" />
-                <div className="absolute bottom-0 left-10 w-48 h-48 bg-pink-400/20 rounded-full translate-y-1/2" />
-                <div className="absolute top-8 right-1/3 w-20 h-20 bg-pink-300/30 rounded-full" />
+            {/* Hero - Haze Secondary Background */}
+            <div className="relative bg-[#3b3e33] overflow-hidden">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" />
+                <div className="absolute bottom-0 left-10 w-48 h-48 bg-white/5 rounded-full translate-y-1/2" />
+                <div className="absolute top-8 right-1/3 w-20 h-20 bg-white/5 rounded-full" />
 
                 <div className="relative max-w-5xl mx-auto px-8 py-20 flex flex-col gap-6">
-                    <span className="inline-flex items-center gap-2 text-white font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-white" />
+                    <span className="inline-flex items-center gap-2 text-[#f0f1e8] font-bold text-sm tracking-widest uppercase">
+                        <span className="w-6 h-px bg-[#f0f1e8]" />
                         Transparent Pricing
                     </span>
-                    <h1 className="text-6xl font-extrabold text-white tracking-tight leading-none">
-                        Payments &<br />
-                        <span className="text-pink-300">Pricing.</span>
+                    <h1 className="text-6xl font-extrabold text-[#f0f1e8] tracking-tight leading-none">
+                        Payments & <br />
+                        <span className="opacity-60 font-extrabold text-[#f0f1e8]">Pricing.</span>
                     </h1>
-                    <p className="text-pink-100 text-lg max-w-xl leading-relaxed">
+                    <p className="text-[#f0f1e8]/80 text-lg max-w-xl leading-relaxed">
                         No hidden fees, no surprises. Here's exactly how payments work, what's included, and what happens if plans change.
                     </p>
-                    <p className="text-xs text-pink-200">All prices include VAT · Payment accepted on the day of delivery</p>
+                    <p className="text-xs text-[#f0f1e8]/40">All prices include VAT · Payment accepted on the day of delivery</p>
                 </div>
             </div>
 
@@ -134,50 +133,48 @@ const PaymentsPage = () => {
                 {/* How it works — 2 step */}
                 <div className="flex flex-col gap-6">
                     <div className="flex flex-col gap-1">
-                        <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-                            <span className="w-6 h-px bg-pink-400 inline-block" />
+                        <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+                            <span className="w-6 h-px secondary-bg inline-block" />
                             How It Works
                         </span>
-                        <h2 className="text-3xl font-extrabold text-gray-900">Simple two-step payment</h2>
+                        <h2 className="text-3xl font-extrabold primary-text">Simple two-step payment</h2>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {/* Step 1 */}
-                        <div className="bg-white rounded-3xl border border-gray-100 p-7 flex flex-col gap-4 relative overflow-hidden">
-                            <div className="absolute top-5 right-6 text-7xl font-extrabold text-gray-50 leading-none select-none">1</div>
-                            <div className="w-12 h-12 rounded-2xl bg-pink-100 flex items-center justify-center">
-                                <CreditCard className="w-6 h-6 text-pink-500" />
+                        <div className="bg-white rounded-3xl border border-[#d8dbca]/40 p-7 flex flex-col gap-4 relative overflow-hidden shadow-sm">
+                            <div className="absolute top-5 right-6 text-7xl font-extrabold text-[#f0f1e8] leading-none select-none">1</div>
+                            <div className="w-12 h-12 rounded-2xl bg-[#f0f1e8] flex items-center justify-center">
+                                <CreditCard className="w-6 h-6 text-[#3b3e33]" />
                             </div>
                             <div>
-                                <p className="font-extrabold text-gray-900 text-lg">Pay your deposit</p>
-                                <p className="text-pink-500 font-bold text-sm mt-0.5">20% of total hire fee</p>
+                                <p className="font-extrabold text-[#3b3e33] text-lg">Pay your deposit</p>
+                                <p className="text-[#3b3e33]/60 font-bold text-sm mt-0.5">20% of total hire fee</p>
                             </div>
                             <p className="text-sm text-gray-500 leading-relaxed">
-                                Once you've agreed a date with us, a 20% deposit secures your booking. We'll confirm everything in writing once it's received.
+                                Once you've agreed a date with us, a 20% deposit secures your booking. We'll confirm everything in writing.
                             </p>
                             <div className="flex flex-wrap gap-2 mt-auto pt-3 border-t border-gray-100">
                                 {["PayPal", "Bank Transfer", "Card"].map((m) => (
-                                    <span key={m} className="text-xs font-bold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-lg">{m}</span>
+                                    <span key={m} className="text-[10px] font-bold uppercase tracking-wider text-gray-400 bg-gray-50 px-2.5 py-1 rounded-lg border border-gray-100">{m}</span>
                                 ))}
                             </div>
                         </div>
 
-                        {/* Step 2 */}
-                        <div className="bg-white rounded-3xl border border-gray-100 p-7 flex flex-col gap-4 relative overflow-hidden">
-                            <div className="absolute top-5 right-6 text-7xl font-extrabold text-gray-50 leading-none select-none">2</div>
-                            <div className="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center">
-                                <Check className="w-6 h-6 text-green-500" />
+                        <div className="bg-white rounded-3xl border border-[#d8dbca]/40 p-7 flex flex-col gap-4 relative overflow-hidden shadow-sm">
+                            <div className="absolute top-5 right-6 text-7xl font-extrabold text-[#f0f1e8] leading-none select-none">2</div>
+                            <div className="w-12 h-12 rounded-2xl bg-[#3b3e33] flex items-center justify-center">
+                                <Check className="w-6 h-6 text-[#f0f1e8]" />
                             </div>
                             <div>
-                                <p className="font-extrabold text-gray-900 text-lg">Pay the rest on the day</p>
-                                <p className="text-green-500 font-bold text-sm mt-0.5">Remaining 80% on delivery</p>
+                                <p className="font-extrabold text-[#3b3e33] text-lg">Pay the rest on the day</p>
+                                <p className="text-[#3b3e33]/60 font-bold text-sm mt-0.5">Remaining 80% on delivery</p>
                             </div>
                             <p className="text-sm text-gray-500 leading-relaxed">
-                                Once we've arrived and finished setting everything up safely, the remaining balance is due before we leave. Easy.
+                                Once we've arrived and finished setting everything up safely, the remaining balance is due before we leave.
                             </p>
                             <div className="flex flex-wrap gap-2 mt-auto pt-3 border-t border-gray-100">
                                 {["Cash", "PayPal", "Bank Transfer", "Card"].map((m) => (
-                                    <span key={m} className="text-xs font-bold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-lg">{m}</span>
+                                    <span key={m} className="text-[10px] font-bold uppercase tracking-wider text-gray-400 bg-gray-50 px-2.5 py-1 rounded-lg border border-gray-100">{m}</span>
                                 ))}
                             </div>
                         </div>
@@ -187,23 +184,22 @@ const PaymentsPage = () => {
                 {/* Payment methods */}
                 <div className="flex flex-col gap-6">
                     <div className="flex flex-col gap-1">
-                        <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-                            <span className="w-6 h-px bg-pink-400 inline-block" />
+                        <span className="inline-flex items-center gap-2 text-[#3b3e33] font-bold text-sm tracking-widest uppercase">
+                            <span className="w-6 h-px bg-[#3b3e33] inline-block" />
                             Payment Methods
                         </span>
-                        <h2 className="text-3xl font-extrabold text-gray-900">We accept</h2>
+                        <h2 className="text-3xl font-extrabold text-[#3b3e33]">We accept</h2>
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                         {paymentMethods.map((method, i) => (
-                            <div key={i} className="bg-white rounded-3xl border border-gray-100 p-6 flex flex-col items-center text-center gap-3 hover:border-pink-200 hover:shadow-md hover:shadow-pink-50 transition-all">
-                                {/* Placeholder logo area */}
-                                <div className="w-16 h-16 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-3xl">
+                            <div key={i} className="bg-white rounded-3xl border border-[#d8dbca]/40 p-6 flex flex-col items-center text-center gap-3 hover:border-[#3b3e33] transition-all shadow-sm">
+                                <div className="w-16 h-16 rounded-2xl bg-[#f0f1e8] border border-[#d8dbca]/30 flex items-center justify-center text-3xl">
                                     {method.icon}
                                 </div>
                                 <div>
-                                    <p className="font-extrabold text-gray-900 text-sm">{method.name}</p>
-                                    <p className="text-xs text-gray-400 mt-0.5">{method.desc}</p>
+                                    <p className="font-extrabold text-[#3b3e33] text-sm">{method.name}</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-gray-400 mt-0.5">{method.desc}</p>
                                 </div>
                             </div>
                         ))}
@@ -213,32 +209,32 @@ const PaymentsPage = () => {
                 {/* Full pricing breakdown */}
                 <div className="flex flex-col gap-6">
                     <div className="flex flex-col gap-1">
-                        <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-                            <span className="w-6 h-px bg-pink-400 inline-block" />
+                        <span className="inline-flex items-center gap-2 text-[#3b3e33] font-bold text-sm tracking-widest uppercase">
+                            <span className="w-6 h-px bg-[#3b3e33] inline-block" />
                             Full Breakdown
                         </span>
-                        <h2 className="text-3xl font-extrabold text-gray-900">Every charge explained</h2>
+                        <h2 className="text-3xl font-extrabold text-[#3b3e33]">Every charge explained</h2>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {pricingItems.map((item, i) => (
-                            <div key={i} className="bg-white rounded-3xl border border-gray-100 p-6 flex flex-col gap-4">
+                            <div key={i} className="bg-white rounded-3xl border border-[#d8dbca]/40 p-6 flex flex-col gap-4 shadow-sm">
                                 <div className="flex items-start justify-between gap-3">
                                     <div className="flex items-center gap-3">
                                         <div className={`w-10 h-10 rounded-2xl ${item.bg} flex items-center justify-center flex-shrink-0`}>
                                             {item.icon}
                                         </div>
-                                        <p className="font-extrabold text-gray-900 text-sm">{item.title}</p>
+                                        <p className="font-extrabold text-[#3b3e33] text-sm">{item.title}</p>
                                     </div>
                                     {item.tag && (
-                                        <span className="text-xs font-bold text-gray-400 bg-gray-100 px-2.5 py-1 rounded-full flex-shrink-0">
+                                        <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 bg-gray-50 px-2.5 py-1 rounded-full border border-gray-100">
                                             {item.tag}
                                         </span>
                                     )}
                                 </div>
                                 <div className="flex items-baseline gap-1.5">
-                                    <span className="text-3xl font-extrabold text-gray-900">{item.amount}</span>
-                                    <span className="text-xs text-gray-400 font-semibold">{item.amountSub}</span>
+                                    <span className="text-3xl font-extrabold text-[#3b3e33]">{item.amount}</span>
+                                    <span className="text-[10px] uppercase tracking-widest text-gray-400 font-bold">{item.amountSub}</span>
                                 </div>
                                 <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
                             </div>
@@ -249,22 +245,21 @@ const PaymentsPage = () => {
                 {/* Refund policy */}
                 <div className="flex flex-col gap-6">
                     <div className="flex flex-col gap-1">
-                        <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-                            <span className="w-6 h-px bg-pink-400 inline-block" />
+                        <span className="inline-flex items-center gap-2 text-[#3b3e33] font-bold text-sm tracking-widest uppercase">
+                            <span className="w-6 h-px bg-[#3b3e33] inline-block" />
                             Refunds & Cancellations
                         </span>
-                        <h2 className="text-3xl font-extrabold text-gray-900">What happens if plans change?</h2>
-                        <p className="text-gray-400 text-sm mt-1 max-w-lg">We're a family business and we'll always try to be fair. Here's our policy in plain English.</p>
+                        <h2 className="text-3xl font-extrabold text-[#3b3e33]">What happens if plans change?</h2>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         {refundPolicies.map((policy, i) => (
-                            <div key={i} className="bg-white rounded-2xl border border-gray-100 p-5 flex items-start gap-4">
+                            <div key={i} className="bg-white rounded-2xl border border-[#d8dbca]/40 p-5 flex items-start gap-4 shadow-sm">
                                 <div className={`w-10 h-10 rounded-2xl ${policy.bg} flex items-center justify-center flex-shrink-0`}>
                                     {policy.icon}
                                 </div>
                                 <div>
-                                    <p className="font-extrabold text-gray-900 text-sm mb-1">{policy.title}</p>
+                                    <p className="font-extrabold text-[#3b3e33] text-sm mb-1">{policy.title}</p>
                                     <p className="text-sm text-gray-500 leading-relaxed">{policy.description}</p>
                                 </div>
                             </div>
@@ -273,22 +268,22 @@ const PaymentsPage = () => {
                 </div>
 
                 {/* Bottom note */}
-                <div className="bg-pink-50 rounded-3xl p-8 flex flex-col items-center text-center gap-4">
-                    <span className="text-3xl"><Bubbles className="text-pink-500 w-15 h-15" /></span>
-                    <h3 className="text-xl font-extrabold text-gray-900">Have a question about payment?</h3>
-                    <p className="text-sm text-gray-500 max-w-md leading-relaxed">
-                        We're always happy to chat. If something isn't clear or your situation is a bit different, just get in touch and we'll work it out together.
+                <div className="bg-[#3b3e33] rounded-3xl p-8 flex flex-col items-center text-center gap-4">
+                    <span className="text-3xl"><Bubbles className="text-[#f0f1e8] w-12 h-12" /></span>
+                    <h3 className="text-xl font-extrabold text-[#f0f1e8]">Have a question about payment?</h3>
+                    <p className="text-sm text-[#f0f1e8]/70 max-w-md leading-relaxed">
+                        We're always happy to chat. If something isn't clear, just get in touch and we'll work it out together.
                     </p>
-                    <div className="flex items-center gap-3 flex-wrap justify-center">
+                    <div className="flex items-center gap-3 flex-wrap justify-center mt-2">
                         <a
                             href="https://wa.me/447700000000"
-                            className="px-5 py-2.5 rounded-xl bg-pink-500 text-white font-extrabold text-sm hover:bg-pink-600 transition-all shadow-md shadow-pink-200"
+                            className="px-5 py-2.5 rounded-xl bg-[#f0f1e8] text-[#3b3e33] font-extrabold text-sm hover:bg-white transition-all shadow-lg"
                         >
                             WhatsApp Us
                         </a>
                         <a
                             href="/contact"
-                            className="px-5 py-2.5 rounded-xl border-2 border-gray-200 text-gray-600 font-bold text-sm hover:border-pink-300 hover:text-pink-500 transition-all"
+                            className="px-5 py-2.5 rounded-xl border-2 border-[#f0f1e8]/20 text-[#f0f1e8] font-bold text-sm hover:border-[#f0f1e8] transition-all"
                         >
                             All Contact Options
                         </a>
@@ -296,7 +291,7 @@ const PaymentsPage = () => {
                 </div>
 
             </div>
-        </>
+        </div>
     );
 };
 

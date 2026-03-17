@@ -1,6 +1,7 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import Logo from '../../assets/logo.jpg'
+import AboutImg from '../../assets/about.png'
 
 
 const stats = [
@@ -37,8 +38,10 @@ const AboutUs = () => {
 
                     {/* Body */}
                     <p className="text-gray-500 text-base leading-relaxed max-w-md">
-                        We're Sarah & Mia — a mother and daughter duo who turned a passion for making kids smile into something real. Every castle we deliver comes with the same care we'd give our own family's party. No fuss, no stress, just pure bouncy joy.
-                    </p>
+                    Haze Events is more than just a business — it’s a dream built by a mum and daughter who share a love for beautiful celebrations and meaningful moments. What started as conversations, ideas and late-night planning has turned into something we are so proud to launch together.
+                    We specialise in luxury soft play and elegant event styling for weddings, christenings, birthdays, baby showers and all of life’s unforgettable occasions. Our goal is to create timeless, stylish spaces where little ones can play and families can make memories that last forever ✨
+                    Every detail you see has been chosen with love, care and intention. This is the beginning of something so special for us, and we’re beyond grateful for all the support already.
+                    If you believe in supporting small businesses, family businesses, or women building their dreams together — we’d love if you shared, liked or tagged someone planning a special event 🤍                    </p>
 
                     {/* Stats row */}
                     <div ref={ref} className="flex flex-wrap gap-0 mt-4 border border-gray-100 rounded-2xl overflow-hidden divide-x divide-gray-100">
@@ -60,9 +63,9 @@ const AboutUs = () => {
 
                 {/* Right: Image */}
                 <div className="flex-1 w-full">
-                    <div className="relative rounded-3xl overflow-hidden aspect-[5/5] bg-pink-50 shadow-xl shadow-pink-100">
+                    <div className="relative rounded-3xl overflow-hidden aspect-[5/5]">
                         <img
-                            src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80"
+                            src={AboutImg}
                             alt="Children playing on bouncy castle"
                             className="w-full h-full object-cover"
                         />
@@ -72,8 +75,8 @@ const AboutUs = () => {
                                 <img src={Logo} className="rounded-lg" alt="" />
                             </div>
                             <div>
-                                <p className="text-xs font-bold text-gray-900">Family Run</p>
-                                <p className="text-xs text-gray-400">Since 2026</p>
+                                <p className="text-xs font-bold text-gray-900">Haze Events</p>
+                                <p className="text-xs text-gray-400">Moments That Matter</p>
                             </div>
                         </div>
                     </div>

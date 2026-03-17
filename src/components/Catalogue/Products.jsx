@@ -3,11 +3,8 @@ import Footer from "../Footer/Footer"
 import Navbar from "../Navbar/Navbar"
 import { Baby, Users } from "lucide-react";
 
-
 const Products = () => {
-
     return (
-
         <>
         <Navbar />
 
@@ -16,13 +13,13 @@ const Products = () => {
 
                 {/* Header */}
                 <div className="flex flex-col items-center text-center gap-3 mb-14">
-                    <span className="inline-flex items-center gap-2 text-pink-500 font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-pink-400 inline-block" />
+                    <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+                        <span className="w-6 h-px bg-[#3b3e33] inline-block" />
                         Catalogue
-                        <span className="w-6 h-px bg-pink-400 inline-block" />
+                        <span className="w-6 h-px bg-[#3b3e33] inline-block" />
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
-                        View all our <span className="text-pink-500">Castles</span>
+                        View all our <span className="primary-text">Castles</span>
                     </h2>
                     <p className="text-gray-400 text-base max-w-md">
                         View our extensive catalogue of inflatable castles!
@@ -34,10 +31,10 @@ const Products = () => {
                     {castles.map((castle, i) => (
                         <div
                             key={i}
-                            className="bg-white rounded-3xl p-6 flex flex-col gap-4 border border-gray-100 hover:border-pink-200 hover:shadow-lg hover:shadow-pink-50 transition-all duration-300 group"
+                            className="bg-white rounded-3xl p-6 flex flex-col gap-4 border border-[#d8dbca] hover:border-[#3b3e33]/40 hover:shadow-lg hover:shadow-[#3b3e33]/5 transition-all duration-300 group"
                         >
                             {/* Emoji icon */}
-                            <div className="w-14 h-14 rounded-2xl bg-pink-50 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-200">
+                            <div className="w-14 h-14 rounded-2xl bg-[#f8f9f2] flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-200">
                                 {castle.emoji}
                             </div>
 
@@ -55,24 +52,24 @@ const Products = () => {
                             <p className="text-gray-400 text-sm leading-relaxed flex-1">{castle.description}</p>
 
                             {/* Meta */}
-                            <div className="flex items-center gap-3 text-xs font-semibold text-gray-400 pt-2 border-t border-gray-100">
+                            <div className="flex items-center gap-3 text-xs font-semibold text-gray-400 pt-2 border-t border-[#d8dbca]">
                                 <span className="flex items-center gap-2"><Baby className="w-5" /> {castle.age}</span>
-                                <span className="w-px h-3 bg-gray-200" />
+                                <span className="w-px h-3 bg-[#d8dbca]" />
                                 <span className="flex items-center gap-2"><Users className="w-5"/> {castle.capacity}</span>
                             </div>
-                            <button onClick={() => window.open(`/bouncy-castle/${castle.id}`)} className="cursor-pointer w-full mt-1 py-2.5 rounded-xl bg-gray-50 text-gray-700 font-bold text-sm hover:bg-pink-500 hover:text-white transition-all duration-200">
+                            <button
+                                onClick={() => window.open(`/bouncy-castle/${castle.id}`)}
+                                className="hover:bg-[#3b3e33] hover:text-white cursor-pointer w-full mt-1 py-2.5 rounded-xl bg-[#f8f9f2] text-gray-700 font-bold text-sm hover:secondary-bg hover:secondary-text transition-all duration-200"
+                            >
                                 View
                             </button>
                         </div>
                     ))}
                 </div>
 
-                </div>
-
-            
-               
+            </div>
         </section>
-        
+
         </>
     )
 }

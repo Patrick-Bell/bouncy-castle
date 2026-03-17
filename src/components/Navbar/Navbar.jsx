@@ -44,7 +44,7 @@ const Navbar = () => {
             <Tooltip>
               <TooltipTrigger>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/haze_events26/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"

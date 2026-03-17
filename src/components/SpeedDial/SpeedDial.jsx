@@ -31,7 +31,7 @@ const SpeedDial = () => {
                                     pointerEvents: open ? 'auto' : 'none',
                                     transition: `bottom 0.3s ease ${index * 0.05}s, opacity 0.2s ease ${index * 0.05}s`,
                                 }}
-                                className="primary-bg primary-text hover:bg-pink-600 cursor-pointer fixed p-3 rounded-lg text-white z-60"
+                                className="secondary-bg secondary-text hover:bg-pink-600 cursor-pointer fixed p-3 rounded-lg text-white z-60"
                             >
                                 {action.icon}
                             </div>
@@ -46,7 +46,7 @@ const SpeedDial = () => {
             {/* Trigger button */}
             <div
                 onClick={() => setOpen((prev) => !prev)}
-                className="primary-bg primary-text cursor-pointer fixed bottom-2 right-2 p-3 rounded-lg text-white z-60"
+                className="secondary-bg secondary-text cursor-pointer fixed bottom-2 right-2 p-3 rounded-lg text-white z-60"
             >
                 <Plus className={`${open ? 'rotate-45 transition ease-in-out' : 'rotate-180 transition'}`} />
             </div>
