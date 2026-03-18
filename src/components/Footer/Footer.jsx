@@ -10,15 +10,14 @@ const Footer = () => {
         "Quick Links": [
             { label: "Home", href: "/" },
             { label: "Our Castles", href: "/bouncy-castles" },
-            { label: "About Us", href: "/about" },
-            { label: "Awards", href: "/awards" },
+            { label: "Gallery", href: "/gallery" },
             { label: "Contact", href: "/contact" },
         ],
         "Information": [
             { label: "Safety & Risk Assessment", href: "/risk-assessments" },
             { label: "Terms & Conditions", href: "/terms-and-conditions" },
+            { label: 'Bad Weather Policy', href: '/bad-weather-policy' },
             { label: "FAQ", href: "/frequently-asked-questions" },
-            { label: "Privacy Policy", href: "/privacy" },
             { label: 'Payments & Refunds', href: '/payments' },
         ],
     };
@@ -54,8 +53,8 @@ const Footer = () => {
                         {/* Contact quick info */}
                         <div className="flex flex-col gap-2">
                             {[
-                                { icon: <Phone className="w-5" />, text: "07700 900 123" },
-                                { icon: <Mail className="w-5" />, text: "hello@bouncycastle.co.uk" },
+                                { icon: <Phone className="w-5" />, text: "07700 000 000" },
+                                { icon: <Mail className="w-5" />, text: "help@hazeevents.com" },
                                 { icon: <MapPin className="w-5" />, text: "Surrey & South London" },
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-2 text-sm text-gray-400">
@@ -116,7 +115,7 @@ const Footer = () => {
             <div className="border-t border-gray-800">
                 <div className="max-w-7xl mx-auto px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
                     <p className="text-gray-600 text-xs">
-                        © {year} Bouncy Castle Hire. All rights reserved.
+                        © {year} Haze Events. All rights reserved.
                     </p>
                     <div onClick={() => window.scrollTo({ top:0, behavior:'smooth' })} className="flex items-center gap-1 text-gray-600 hover:text-gray-400 transition-colors cursor-pointer">
                         <ArrowUp className="w-5" />
@@ -124,10 +123,6 @@ const Footer = () => {
                     </div>
                     <div className="flex items-center gap-4">
                         <a href="/terms-and-conditions" className="text-gray-600 text-xs hover:text-gray-400 transition-colors">Terms & Conditions</a>
-                        <span className="text-gray-700">·</span>
-                        <a href="/privacy-policy" className="text-gray-600 text-xs hover:text-gray-400 transition-colors">Privacy Policy</a>
-                        <span className="text-gray-700">·</span>
-                        <a href="/risk-assessments" className="text-gray-600 text-xs hover:text-gray-400 transition-colors">Safety</a>
                     </div>
                 </div>
             </div>

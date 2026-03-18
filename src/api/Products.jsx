@@ -7,6 +7,7 @@ import { FaCarSide } from "react-icons/fa";
 export const castles = [
     {
         id: 1,
+        slug: 'white-bouncy-castle',
         emoji: <Castle />,
         name: "White Bouncy Castle",
         description: "A 11ft white bouncy castle that’s perfect for weddings, christenings, birthdays and luxury celebrations.",
@@ -28,6 +29,7 @@ export const castles = [
     },
     {
         id: 2,
+        slug: 'bumper-cars',
         emoji: <FaCarSide />,
         name: "Bumper Cars",
         description: "Bumper cars race track!",

@@ -36,8 +36,8 @@ const SearchBox = () => {
   const information = [
     { title: 'Terms & Conditions', href: '/terms-and-conditions' },
     { title: 'Risk Assessments', href: '/risk-assessments' },
-    { title: 'Privacy Policy', href: '/privacy-policy' },
     { title: 'Payments & Refunds', href: '/payments' },
+    { title: 'Weather Policy', href: '/bad-weather-policy' },
     { title: 'Gallery', href: '/gallery' },
   ]
 
@@ -51,7 +51,7 @@ const SearchBox = () => {
 
   const inflatables = castles.map((castle) => ({
         title: castle.name,
-        href: `/bouncy-castle/${castle.id}`,
+        href: `/bouncy-castle/${castle.slug}`,
     }))
   
 

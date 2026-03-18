@@ -57,8 +57,9 @@ const Services = () => {
                             </div>
 
                             {/* CTA */}
-                            
-                            <ProductModal product={castle} />
+                            <button onClick={() => window.open(`/bouncy-castle/${castle.slug}`)} className="cursor-pointer w-full mt-1 py-2.5 rounded-xl bg-gray-50 text-gray-700 font-bold text-sm hover:bg-[#ebeddf] hover:text-[#3b3e33] transition-all duration-200">
+                            View
+                            </button>
                         </div>
                     ))}
                 </div>

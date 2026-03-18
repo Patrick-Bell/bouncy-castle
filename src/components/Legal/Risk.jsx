@@ -21,7 +21,7 @@ const clauses = [
         id: "cancellation",
         title: "2. Cancellation & Rescheduling",
         body: [
-            "Cancellations must be made in writing by email to hello@bouncycastle.co.uk. Verbal cancellations will not be accepted.",
+            "Cancellations must be made in writing by email to help@hazeevents.com. Verbal cancellations will not be accepted.",
             "Cancellations made more than 14 days before the hire date will receive a full refund of the deposit, returned within 5 working days.",
             "Cancellations made between 7 and 14 days before the hire date will result in the deposit being retained in full.",
             "Cancellations made within 7 days of the hire date may be subject to a charge of up to 50% of the total hire fee, at our discretion.",
@@ -114,7 +114,7 @@ const clauses = [
             "We collect personal information (name, address, phone number, email) solely for the purpose of fulfilling your hire booking and communicating with you about your booking.",
             "We will never sell, share, or pass your personal data to third parties for marketing purposes.",
             "By making a booking you consent to us retaining your contact details for the purpose of sending booking confirmations, reminders, and follow-up communications related to your hire.",
-            "You have the right to request that we delete your personal data at any time by emailing hello@bouncycastle.co.uk. We will comply within 30 days except where retention is required for legal or accounting purposes.",
+            "You have the right to request that we delete your personal data at any time by emailing help@hazeevents.com. We will comply within 30 days except where retention is required for legal or accounting purposes.",
             "We may take photographs or videos at events for marketing purposes only with the express prior consent of the hirer. We will always ask before taking any photos.",
             "Our full Privacy Policy is available on request and sets out in detail how we collect, store, and process your personal data in compliance with the UK GDPR.",
         ],
@@ -125,7 +125,7 @@ const clauses = [
         body: [
             "We are committed to providing an excellent service and take all feedback seriously. If you are dissatisfied with any aspect of our service or equipment, we want to hear from you.",
             "Complaints regarding equipment condition or safety must be raised with the delivery team at the point of setup.",
-            "All other complaints must be submitted in writing to hello@bouncycastle.co.uk within 48 hours of the collection of equipment.",
+            "All other complaints must be submitted in writing to help@hazeevents.com within 48 hours of the collection of equipment.",
             "We will acknowledge all written complaints within 2 working days and aim to provide a full response within 7 working days.",
             "Where a complaint is upheld, we may offer a partial or full refund, a discount on a future booking, or other appropriate remedy at our discretion.",
             "In the event of a dispute that cannot be resolved directly, the parties agree to attempt to resolve the matter through mediation before pursuing legal proceedings.",
@@ -140,7 +140,7 @@ const clauses = [
             "We reserve the right to update or amend these Terms and Conditions at any time. The version applicable to your booking will be the version in force at the date of your booking confirmation.",
             "If any provision of these Terms and Conditions is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.",
             "These Terms and Conditions are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.",
-            "Bouncy Castle Hire is a family-run business based in Surrey, UK. Contact: hello@bouncycastle.co.uk | 07700 900 123.",
+            "Bouncy Castle Hire is a family-run business based in Surrey, UK. Contact: help@hazeevents.com | 07700 000 000.",
         ],
     },
 ];
@@ -246,7 +246,7 @@ const TermsPage = () => {
                         <div className="bg-white/50 border border-[#d8dbca]/30 rounded-2xl p-5 text-center flex flex-col gap-2">
                             <p className="text-gray-500 text-xs font-bold uppercase tracking-wide">Questions about these terms?</p>
                             <p className="text-gray-400 text-xs">
-                                Email us at <strong className="text-[#3b3e33]">hello@bouncycastle.co.uk</strong> or call <strong className="text-[#3b3e33]">07700 900 123</strong>
+                                Email us at <strong className="text-[#3b3e33]">help@hazeevents.com</strong> or call <strong className="text-[#3b3e33]">07700 000 000</strong>
                             </p>
                         </div>
                     </div>

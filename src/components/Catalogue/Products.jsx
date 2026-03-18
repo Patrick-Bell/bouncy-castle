@@ -58,7 +58,7 @@ const Products = () => {
                                 <span className="flex items-center gap-2"><Users className="w-5"/> {castle.capacity}</span>
                             </div>
                             <button
-                                onClick={() => window.open(`/bouncy-castle/${castle.id}`)}
+                                onClick={() => window.open(`/bouncy-castle/${castle.slug}`)}
                                 className="hover:bg-[#3b3e33] hover:text-white cursor-pointer w-full mt-1 py-2.5 rounded-xl bg-[#f8f9f2] text-gray-700 font-bold text-sm hover:secondary-bg hover:secondary-text transition-all duration-200"
                             >
                                 View

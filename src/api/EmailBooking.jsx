@@ -16,5 +16,5 @@ export const emailBooking = (castle) => {
   
     const subject = 'Booking Enquiry';
   
-    return `mailto:hello@yourcastle.co.uk?subject=${subject.replace(/ /g, space)}&body=${body}`;
+    return `mailto:help@hazeevents.com?subject=${subject.replace(/ /g, space)}&body=${body}`;
   };

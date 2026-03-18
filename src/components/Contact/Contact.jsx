@@ -75,25 +75,25 @@ const Contact = () => {
                   </div>
                 </a>
 
-                <a href="mailto:hello@yourcastle.co.uk"
+                <a href="mailto:help@hazeevents.com"
                   className="flex items-center gap-4 p-4 rounded-2xl border border-[#d8dbca] hover:border-blue-300 hover:bg-blue-50 transition-all group">
                   <div className="w-11 h-11 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
                     <Mail className="w-5 h-5 text-blue-500" />
                   </div>
                   <div className="flex-1">
                     <p className="font-bold text-sm text-gray-800">Email</p>
-                    <p className="text-xs text-gray-400">hello@yourcastle.co.uk</p>
+                    <p className="text-xs text-gray-400">help@hazeevents.com</p>
                   </div>
                 </a>
 
-                <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer"
+                <a href="https://instagram.com/haze_events26" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-2xl border border-[#d8dbca] hover:border-fuchsia-300 hover:bg-fuchsia-50 transition-all group">
                   <div className="w-11 h-11 rounded-xl bg-fuchsia-100 flex items-center justify-center flex-shrink-0 group-hover:bg-fuchsia-200 transition-colors">
                     <Instagram className="w-5 h-5 text-fuchsia-500" />
                   </div>
                   <div className="flex-1">
                     <p className="font-bold text-sm text-gray-800">Instagram</p>
-                    <p className="text-xs text-gray-400">@yourhandle</p>
+                    <p className="text-xs text-gray-400">@haze_events26</p>
                   </div>
                 </a>
               </div>
@@ -141,7 +141,7 @@ const Contact = () => {
           </div>
 
           {/* Delivery Areas */}
-          <div className="bg-white rounded-3xl border border-[#d8dbca] p-8 mb-8">
+          <div className="bg-white rounded-3xl border border-[#d8dbca] p-8 mb-0">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-2xl bg-[#3b3e33]/10 flex items-center justify-center">
                 <MapPin className="w-5 h-5 primary-text" />
@@ -174,7 +174,7 @@ const Contact = () => {
           </div>
 
           {/* Map */}
-          <div className="z-30">
+          <div className="z-30 hidden">
             <Map center={[51.3566, 0.3082]}>
               <MapTileLayer />
               <MapZoomControl />

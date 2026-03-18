@@ -173,10 +173,10 @@ const FAQPage = () => {
                                 <p className="text-sm opacity-80">We're a family business. You'll always get a real person when you contact us.</p>
                             </div>
                             <div className="flex flex-col gap-2">
-                                <a href="tel:07700900123" className="secondary-text bg-white/10 px-6 py-3 rounded-xl font-bold text-sm hover:bg-white/20 transition flex items-center gap-2 justify-center">
-                                    <Phone size={16} /> 07700 900 123
+                                <a href="tel:07700000000" className="secondary-text bg-white/10 px-6 py-3 rounded-xl font-bold text-sm hover:bg-white/20 transition flex items-center gap-2 justify-center">
+                                    <Phone size={16} /> 07700 000 000
                                 </a>
-                                <a href="mailto:hello@bouncycastle.co.uk" className="primary-text bg-[#f0f1e8] px-6 py-3 rounded-xl font-bold text-sm hover:bg-[#d8dbca] transition flex items-center gap-2 justify-center">
+                                <a href="mailto:help@hazeevents.com" className="primary-text bg-[#f0f1e8] px-6 py-3 rounded-xl font-bold text-sm hover:bg-[#d8dbca] transition flex items-center gap-2 justify-center">
                                     <Mail size={16} /> Email Us
                                 </a>
                             </div>

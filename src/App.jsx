@@ -15,6 +15,7 @@ import SpeedDial from './components/SpeedDial/SpeedDial';
 import Footer from './components/Footer/Footer';
 import PaymentsPage from './components/Legal/PaymentsPage';
 import GalleryPage from './components/AboutUs/Gallery';
+import WeatherPolicy from './components/Legal/WeatherPolicy';
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -44,8 +45,10 @@ const getMetaData = (path) => {
       return { title: 'Haze Events | Payment Information', description: 'Learn about our payment options and policies.' };
     case '/not-found':
       return { title: 'Haze Events | Page Not Found', description: 'The page you are looking for does not exist.' };
+    case '/bad-weather-policy':
+      return { title: 'Haze Events | Bad Weather Policy', description: 'Our policy for cancellations and rescheduling due to bad weather.' };
     default:
-      return { title: 'Haze Events', description: 'Hire fun inflatables for parties and events.' };
+      return { title: 'Haze Events | Moments That Matter', description: 'Hire fun inflatables for parties and events.' };
   }
 };
 
@@ -103,10 +106,11 @@ function App() {
           <Route path='/risk-assessments' element={<TermsPage />} />
           <Route path='/frequently-asked-questions' element={<FAQPage />} />
           <Route path='/bouncy-castles' element={<Products />} />
-          <Route path='/bouncy-castle/:id' element={<DynamicProductPage />} />
+          <Route path='/bouncy-castle/:slug' element={<DynamicProductPage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/payments' element={<PaymentsPage />} />
           <Route path='/gallery' element={<GalleryPage />} />
+          <Route path='/bad-weather-policy' element={<WeatherPolicy />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>

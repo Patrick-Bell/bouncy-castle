@@ -7,7 +7,7 @@ export const faqs = [
         icon: <Calendar className="w-5 h-5" />,
         label: "Booking",
         questions: [
-            { q: "How do I make a booking?", a: "Easy! You can book via our website enquiry form, by calling us on 07700 900 123, or by dropping us an email at hello@bouncycastle.co.uk. Once we confirm availability we'll send over a booking confirmation and deposit details. Simple as that! 🎉" },
+            { q: "How do I make a booking?", a: "Easy! You can book via our website enquiry form, by calling us on 07700 000 000, or by dropping us an email at help@hazeevents.com Once we confirm availability we'll send over a booking confirmation and deposit details. Simple as that! 🎉" },
             { q: "How far in advance should I book?", a: "We always say the sooner the better — especially for summer weekends and school holidays which can book up months in advance! As a rule of thumb, 2–3 weeks notice is great, but we'll always do our best to squeeze in last-minute enquiries too. Just give us a ring!" },
             { q: "Do I need to pay a deposit?", a: "Yes — a small deposit secures your date. Until it's paid, the slot stays open to others (and we'd hate for you to miss out!). The remaining balance is just due on the day before we set up. Easy peasy." },
             { q: "What payment methods do you accept?", a: "We take bank transfer, cash, or card. Bank transfer is our favourite but we're flexible. Just note that the full balance needs to be sorted before we start setting up on the day." },
@@ -45,7 +45,7 @@ export const faqs = [
             { q: "Can adults have a go?", a: "Look, we totally get the temptation 😄 Our castles are designed and certified for children though. Adults can briefly step on to help tiny ones, but no jumping! Some of our bigger units may work for adults — just ask us." },
             { q: "What should kids wear?", a: "Shoes off, glasses off, jewellery off. Socks on, loose clothes — and that's it. Easy! No sharp objects, no hair grips left in pockets, nothing that could catch or scratch." },
             { q: "Are your blowers electrically safe?", a: "Every blower is PAT tested annually by a qualified electrician. The blower needs to stay on and unobstructed the whole time — switching it off while kids are inside is dangerous and must be avoided." },
-            { q: "What if a child gets hurt?", a: "First: switch off the blower so the castle deflates, and get all children off safely. Call 999 for anything serious. Then call us straight away on 07700 900 123 — we'll want to know and will help however we can." },
+            { q: "What if a child gets hurt?", a: "First: switch off the blower so the castle deflates, and get all children off safely. Call 999 for anything serious. Then call us straight away on 07700 000 000 — we'll want to know and will help however we can." },
         ],
     },
     {
@@ -104,7 +104,7 @@ export const faqs = [
             { q: "What's your cancellation policy?", a: "More than 14 days out — full deposit refund. 7–14 days — deposit kept. Under 7 days — up to 50% of the total fee. Under 48 hours — full fee may apply. Life happens though, so if it's a genuine emergency just give us a call and we'll always try to be human about it." },
             { q: "Can I reschedule instead?", a: "Yes please! Rescheduling is always our preference over cancelling. Give us at least 7 days' notice and we'll move your booking to a new date at no charge, subject to availability." },
             { q: "What if YOU have to cancel?", a: "We'll give you as much notice as humanly possible and offer a full reschedule or complete refund including the deposit. It almost never happens but if it does, we'll make it right." },
-            { q: "How do I cancel?", a: "Just send us an email to hello@bouncycastle.co.uk. We need it in writing so there's no confusion. We'll confirm the cancellation and let you know if any charge applies." },
+            { q: "How do I cancel?", a: "Just send us an email to help@hazeevents.com. We need it in writing so there's no confusion. We'll confirm the cancellation and let you know if any charge applies." },
         ],
     },
 ];

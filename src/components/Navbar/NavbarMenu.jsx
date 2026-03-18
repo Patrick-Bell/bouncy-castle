@@ -10,43 +10,6 @@ import {
 } from "@/components/ui/navigation-menu"
 import { castles } from "@/api/Products"
 
-const components = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-]
 
 const NavbarMenu = () => {
   return (
@@ -60,13 +23,16 @@ const NavbarMenu = () => {
                 Learn about safety and risk management for our inflatables.
               </ListItem>
               <ListItem href="/terms-and-conditions" title="Terms & Conditions">
-                Read our rental terms and policies.
+                Review our rental terms and conditions for a smooth experience.
               </ListItem>
               <ListItem href="/gallery" title="Gallery">
                 Browse photos of our bouncy castles in action at various events.
               </ListItem>
               <ListItem href="/payments" title="Payments">
-                View our payment options and policies.
+                Explore our payment options and policies for hassle-free rentals.
+              </ListItem>
+              <ListItem href="/bad-weather-policy" title="Weather">
+                Understand our weather policy for outdoor rentals.
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -79,7 +45,7 @@ const NavbarMenu = () => {
                 <ListItem
                   key={castle.name}
                   title={castle.name}
-                  href={`/bouncy-castle/${castle.id}`}
+                  href={`/bouncy-castle/${castle.slug}`}
                 >
                   {castle.description}
                 </ListItem>

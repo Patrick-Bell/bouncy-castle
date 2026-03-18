@@ -35,7 +35,7 @@ const ProductModal = ({ product, open, onClose }) => {
         const body = encodeURIComponent(
             `Hi Sarah & Mia,\n\nI'm interested in hiring the ${product.name} (${product.price ?? ""}).\n\nCould you please let me know your availability?\n\nThanks!`
         );
-        window.location.href = `mailto:hello@bouncycastle.co.uk?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:help@hazeevents.com?subject=${subject}&body=${body}`;
     };
 
     const handleShare = () => {

@@ -8,10 +8,10 @@ const SpeedDial = () => {
     const [open, setOpen] = useState(false);
 
     const actions = [
-        { icon: <FaWhatsapp size={24} />, label: "WhatsApp", link: "https://wa.me/1234567890" },
-        { icon: <MdEmail size={24} />, label: "Email", link: '' },
-        { icon: <Phone size={24} />, label: "Phone", link: '' },
-        { icon: <FaInstagram size={24} />, label: "Instagram", link: '' },
+        { icon: <FaWhatsapp size={24} />, label: "WhatsApp", link: "https://wa.me/07700000000" },
+        { icon: <MdEmail size={24} />, label: "Email", link: 'mailto:help@hazeevents.com' },
+        { icon: <Phone size={24} />, label: "Phone", link: 'tel:07700000000' },
+        { icon: <FaInstagram size={24} />, label: "Instagram", link: 'https://www.instagram.com/haze_events26/' },
     ];
 
     return (
@@ -23,7 +23,7 @@ const SpeedDial = () => {
                     <Tooltip key={index}>
                         <TooltipTrigger asChild>
                             <div
-                                onClick={() => window.location.href = action.link}
+                                onClick={() => window.open(action.link, '_blank', 'noopener,noreferrer')}                                
                                 style={{
                                     bottom: open ? `${bottomOffset}px` : '8px',
                                     right: '8px',

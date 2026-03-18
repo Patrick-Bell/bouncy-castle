@@ -42,9 +42,9 @@ const DynamicProductPage = () => {
 
     const [overnight, setOvernight] = useState(false);
 
-    const { id } = useParams();
+    const { slug } = useParams();
 
-    const castle = castles.find((castle) => castle.id === Number(id))
+    const castle = castles.find((castle) => castle.slug === slug)
 
     if (!castle) {
         return <CastleNotFound />;
@@ -314,7 +314,7 @@ const DynamicProductPage = () => {
                     </div>
                     <div>
                       <p className="font-bold text-sm text-gray-800">Email Us</p>
-                      <p className="text-xs text-gray-400">hello@yourcastle.co.uk — we reply within 24hrs</p>
+                      <p className="text-xs text-gray-400">help@hazeevents.com — we reply within 24hrs</p>
                     </div>
                   </a>
                 </div>
@@ -414,7 +414,7 @@ const DynamicProductPage = () => {
               .map((c, i) => (
                 <a
                   key={i}
-                  href={`/bouncy-castle/${c.id}`}
+                  href={`/bouncy-castle/${c.slug}`}
                   className="bg-white rounded-3xl p-6 flex flex-col gap-4 border border-gray-100 hover:shadow-lg transition-all duration-300 group"
                 >
                   {/* Emoji */}

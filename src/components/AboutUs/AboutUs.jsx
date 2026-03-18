@@ -5,10 +5,10 @@ import AboutImg from '../../assets/about.png'
 
 
 const stats = [
-    { value: 200, suffix: '+', label: "Happy Bookings" },
-    { value: 15, suffix: '+', label: "Castles Available" },
-    { value: 5, suffix: '*', label: "Average Rating" },
-    { value: 8, suffix: '+yrs', label: "In Business" },
+    { value: 100, suffix: '%', label: "Safe & Clean Equipment" },
+    { value: 10, suffix: '+', label: "Exciting Inflatables" },
+    { value: 1, suffix: ' year', label: "In Business" },
+    { value: 3, suffix: '', label: "More Castles Coming Soon!" },
 ];
 
 const AboutUs = () => {
