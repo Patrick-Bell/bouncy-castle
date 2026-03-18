@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Banner from "../Banner/Banner";
+import Action from "../AboutUs/Action";
+import FAQAction from "./FAQAction";
 
 const faqs = [
     {
@@ -89,6 +92,9 @@ const ShortFAQ = () => {
                         );
                     })}
                 </div>
+            <div className="text-center mt-10">
+            <FAQAction />
+            </div>
             </div>
         </section>
     );

@@ -44,7 +44,7 @@ const AboutUs = () => {
                     If you believe in supporting small businesses, family businesses, or women building their dreams together — we’d love if you shared, liked or tagged someone planning a special event 🤍                    </p>
 
                     {/* Stats row */}
-                    <div ref={ref} className="flex flex-wrap gap-0 mt-4 border border-gray-100 rounded-2xl overflow-hidden divide-x divide-gray-100">
+                    <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 gap-0 mt-4 border border-gray-100 rounded-2xl overflow-hidden divide-x divide-gray-100">
                         {stats.map((stat, i) => (
                             <div
                                 key={i}

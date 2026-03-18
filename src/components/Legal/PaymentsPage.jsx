@@ -107,7 +107,7 @@ const PaymentsPage = () => {
             <Navbar />
 
             {/* Hero - Haze Secondary Background */}
-            <div className="relative bg-[#3b3e33] overflow-hidden">
+            <div className="relative bg-[#3b3e33] overflow-hidden top-10 lg:top-0">
                 <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" />
                 <div className="absolute bottom-0 left-10 w-48 h-48 bg-white/5 rounded-full translate-y-1/2" />
                 <div className="absolute top-8 right-1/3 w-20 h-20 bg-white/5 rounded-full" />

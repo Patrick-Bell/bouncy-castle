@@ -51,7 +51,7 @@ const FAQPage = () => {
             <Navbar />
 
             {/* HERO */}
-            <div className="relative secondary-bg secondary-text overflow-hidden">
+            <div className="relative secondary-bg secondary-text overflow-hidden top-10 lg:top-0">
                 {/* Decorative circles adjusted to logo light color at low opacity */}
                 <div className="absolute top-0 right-0 w-80 h-80 bg-[#f0f1e8]/10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
                 <div className="absolute bottom-0 left-10 w-48 h-48 bg-[#f0f1e8]/5 rounded-full translate-y-1/2"></div>
