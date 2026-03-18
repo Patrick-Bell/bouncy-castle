@@ -180,7 +180,7 @@ const TermsPage = () => {
             <Navbar />
 
             {/* HERO - Swapped to Haze Charcoal background */}
-            <div className="relative bg-[#3b3e33] overflow-hidden">
+            <div className="relative bg-[#3b3e33] overflow-hidden top-10 lg:top-0">
                 {/* Decorative circles adjusted to logo secondary-text color at low opacity */}
                 <div className="absolute top-0 right-0 w-80 h-80 bg-[#f0f1e8]/10 rounded-full -translate-y-1/2 translate-x-1/3" />
                 <div className="absolute bottom-0 left-10 w-48 h-48 bg-[#f0f1e8]/5 rounded-full translate-y-1/2" />
