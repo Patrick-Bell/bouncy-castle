@@ -89,7 +89,7 @@ const Navbar = () => {
         {/* ── Mobile menu ── */}
         {mobileOpen && (
           <div
-            className="md:hidden fixed inset-0 top-16 z-40 overflow-auto min-h-100"
+            className="md:hidden fixed inset-0 top-16 bg-white z-40 overflow-auto min-h-120"
             style={{ animation: "slideDown 0.25s ease-out forwards" }}
           >
             {/* Backdrop */}
