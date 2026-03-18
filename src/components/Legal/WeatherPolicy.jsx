@@ -421,7 +421,7 @@ const WeatherPolicy = () => {
             <Navbar />
 
             {/* Hero */}
-            <div className="relative secondary-bg secondary-text overflow-hidden">
+            <div className="relative secondary-bg secondary-text overflow-hidden top-10">
                 <div className="absolute top-0 right-0 w-80 h-80 bg-[#f0f1e8]/10 rounded-full -translate-y-1/2 translate-x-1/3" />
                 <div className="absolute bottom-0 left-10 w-48 h-48 bg-[#f0f1e8]/5 rounded-full translate-y-1/2" />
                 <div className="absolute top-8 right-1/3 w-20 h-20 bg-[#f0f1e8]/10 rounded-full" />
