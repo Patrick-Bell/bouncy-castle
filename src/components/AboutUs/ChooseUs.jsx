@@ -52,10 +52,13 @@ const ChooseUs = () => {
                     transition={{ duration: 1, ease: "easeOut" }}
                     />
                     </span>
-                    <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight flex items-center">
-                        What Makes Us 
-                        <span className="secondary-text mx-2 w-[190px] text-left"> <WordRotate words={['Unique', 'Special', 'Different']} /> </span>
-                    </h2>
+                    <h2 className="w-full mx-auto text-3xl lg:text-5xl font-extrabold text-gray-900 tracking-tight flex justify-center items-center">
+                        What Makes Us
+                        <span className="hidden lg:block secondary-text mx-2 w-[190px] text-left">
+                            <WordRotate words={['Unique', 'Special', 'Different']} />
+                        </span>
+                        <span className="block lg:hidden secondary-text mx-2 text-left">Different</span>
+                        </h2>
                     <p className="text-gray-400 text-base max-w-md">
                         Our values and committments to you.
                     </p>

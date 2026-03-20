@@ -39,10 +39,10 @@ const AboutUs = () => {
                     </span>
 
                     {/* Heading */}
-                    <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight flex items-center">
+                    <h2 className="text-3xl lg:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight flex items-center">
                         Fun is a 
                         <span className="secondary-text mx-2"> family</span> 
-                        experience.
+                        experience
                     </h2>
 
                     {/* Body */}
