@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 import { Check, Truck, Moon, Clock, CloudRain, RefreshCw, AlertTriangle, CreditCard, Bubbles } from "lucide-react";
 import { FaPaypal } from "react-icons/fa";
 import { BsBank2, BsCash, BsCreditCard } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const paymentMethods = [
     { name: "PayPal", icon: <FaPaypal className="text-[#3b3e33]" />, desc: "Pay securely via PayPal" },
@@ -114,7 +115,12 @@ const PaymentsPage = () => {
 
                 <div className="relative max-w-5xl mx-auto px-8 py-20 flex flex-col gap-6">
                     <span className="inline-flex items-center gap-2 text-[#f0f1e8] font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-[#f0f1e8]" />
+                    <motion.span
+                        className="block h-px bg-[#f0f1e8]"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: 24 }} // Tailwind w-6 = 24px
+                        transition={{ duration: 0.4, ease: "easeOut" }}
+                        />                        
                         Transparent Pricing
                     </span>
                     <h1 className="text-6xl font-extrabold text-[#f0f1e8] tracking-tight leading-none">

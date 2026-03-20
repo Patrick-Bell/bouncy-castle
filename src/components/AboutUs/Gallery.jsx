@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { BsInstagram } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const allImages = castles.flatMap((castle) =>
     (castle.images || []).map((src) => ({
@@ -48,10 +49,25 @@ const GalleryPage = () => {
 
                 {/* Header */}
                 <div className="flex flex-col items-center text-center gap-3 mb-14">
-                    <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-[#3b3e33] inline-block" />
+                <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+                        
+                        {/* Left line */}
+                        <motion.span
+                            className="block w-6 h-px bg-primary origin-left"
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            transition={{ duration: 1 }}
+                        />
+
                         Gallery
-                        <span className="w-6 h-px bg-[#3b3e33] inline-block" />
+
+                        {/* Right line */}
+                        <motion.span
+                            className="block w-6 h-px bg-primary origin-right"
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            transition={{ duration: 1, delay: 0.2 }}
+                        />
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
                         See them in <span className="primary-text">action</span>

@@ -1,6 +1,7 @@
 import { Marquee } from "@/components/ui/marquee"
 import ReviewCard from "./ReviewCard"
 import { reviews } from "@/api/Review"
+import { motion } from "framer-motion"
 
 const Reviews = () => {
 
@@ -16,10 +17,24 @@ const Reviews = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="flex flex-col items-center text-center gap-3 mb-14">
-                    <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px secondary-bg inline-block" />
-                        What people say about us
-                        <span className="w-6 h-px secondary-bg inline-block" />
+        <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+                    {/* Left line */}
+                    <motion.span
+                    className="block w-6 h-px bg-primary origin-left"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    />
+
+                    What people say about us
+
+                    {/* Right line */}
+                    <motion.span
+                    className="block w-6 h-px bg-primary origin-right"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    />
                     </span>
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
                         Our <span className="secondary-text">Customers</span>

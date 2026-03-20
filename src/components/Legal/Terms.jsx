@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { AlertCircle, AlertTriangle, Download, Eye, File, LocateIcon, Search } from "lucide-react";
 import { MdEmergency } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const sections = [
     {
@@ -272,7 +273,12 @@ const RiskAssessmentPage = () => {
                 <div className="relative max-w-5xl mx-auto px-8 py-20 flex flex-col gap-6">
                     <div className="flex items-center gap-3">
                     <span className="inline-flex items-center gap-2 text-[#f0f1e8] font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-[#f0f1e8]" />
+                    <motion.span
+                        className="block h-px bg-[#f0f1e8]"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: 24 }} // Tailwind w-6 = 24px
+                        transition={{ duration: 0.4, ease: "easeOut" }}
+                        />
                         Legal
                     </span>
                     </div>
@@ -332,7 +338,7 @@ const RiskAssessmentPage = () => {
 
                                         <div className="flex items-center justify-between gap-2 pt-1 border-t border-gray-100">
                                             <span className="text-xs text-gray-400">Issued: {cert.date}</span>
-                                            <button className="inline-flex items-center gap-1.5 primary-bg primary-text text-xs font-bold px-3 py-1.5 rounded-lg border border-[#d8dbca] hover:bg-[#d8dbca] transition-colors">
+                                            <button className="inline-flex items-center gap-1.5 primary-bg primary-text text-xs font-bold px-3 py-1.5 rounded-lg border border-[#d8dbca] hover:bg-[#d8dbca] transition-colors cursor-pointer">
                                                 <Download size={14} /> Download
                                             </button>
                                         </div>
@@ -341,12 +347,12 @@ const RiskAssessmentPage = () => {
                             </div>
 
                             {/* Download all */}
-                            <div className="mt-4 bg-[#3b3e33] rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div className="mt-8 bg-[#3b3e33] rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between">
                                 <div>
                                     <p className="font-bold text-[#f0f1e8] text-sm">Download Full Risk Assessment</p>
                                     <p className="text-[#f0f1e8]/60 text-xs mt-0.5">Complete document for venues and event organisers.</p>
                                 </div>
-                                <button className="flex-shrink-0 inline-flex items-center gap-2 bg-[#f0f1e8] text-[#3b3e33] font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-white transition-colors">
+                                <button className="cursor-pointer flex-shrink-0 inline-flex items-center gap-2 bg-[#f0f1e8] text-[#3b3e33] font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-white transition-colors">
                                     <Download size={16} /> Full PDF Bundle
                                 </button>
                             </div>
@@ -419,7 +425,7 @@ const RiskAssessmentPage = () => {
                                 <button
                                     key={id}
                                     onClick={() => scrollTo(id)}
-                                    className={`text-left text-xs px-3 py-2 rounded-lg font-bold transition-all duration-200 flex items-center gap-2.5 group w-full
+                                    className={`cursor-pointer text-left text-xs px-3 py-2 rounded-lg font-bold transition-all duration-200 flex items-center gap-2.5 group w-full
                                         ${isActive
                                             ? "bg-[#3b3e33] text-[#f0f1e8]"
                                             : "text-gray-400 hover:text-[#3b3e33] hover:bg-[#f0f1e8]"

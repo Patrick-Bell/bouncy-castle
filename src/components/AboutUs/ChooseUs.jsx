@@ -1,4 +1,6 @@
 import { Heart, ShieldCheck, Smile, Star } from "lucide-react";
+import { motion } from "framer-motion";
+import { WordRotate } from "../ui/word-rotate";
 
 const ChooseUs = () => {
 
@@ -31,13 +33,28 @@ const ChooseUs = () => {
         
         <div className="flex flex-col gap-8 max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center gap-3 mb-6">
-                    <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-primary inline-block" />
-                        Why Choose Us
-                        <span className="w-6 h-px bg-primary inline-block" />
+        <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+                    {/* Left line */}
+                    <motion.span
+                    className="block w-6 h-px bg-primary origin-left"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    />
+
+                    Why Choose Us
+
+                    {/* Right line */}
+                    <motion.span
+                    className="block w-6 h-px bg-primary origin-right"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    />
                     </span>
-                    <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
-                        What Makes Us <span className="secondary-text">Different</span>
+                    <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight flex items-center">
+                        What Makes Us 
+                        <span className="secondary-text mx-2 w-[190px] text-left"> <WordRotate words={['Unique', 'Special', 'Different']} /> </span>
                     </h2>
                     <p className="text-gray-400 text-base max-w-md">
                         Our values and committments to you.

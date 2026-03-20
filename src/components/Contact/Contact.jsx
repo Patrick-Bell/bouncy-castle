@@ -5,6 +5,7 @@ import {
     Map, MapCircle, MapFullscreenControl, MapLocateControl,
     MapMarker, MapPopup, MapSearchControl, MapTileLayer, MapZoomControl,
 } from "@/components/ui/map"
+import { motion } from "framer-motion"
 
 const postcodeAreas = [
   { area: "Manchester City Centre", codes: ["M1", "M2", "M3", "M4"] },
@@ -31,11 +32,26 @@ const Contact = () => {
 
           {/* Header */}
           <div className="flex flex-col items-center text-center gap-3 mb-14">
-            <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
-              <span className="w-6 h-px bg-[#3b3e33] inline-block" />
-              Get in Touch
-              <span className="w-6 h-px bg-[#3b3e33] inline-block" />
-            </span>
+          <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
+                        
+                        {/* Left line */}
+                        <motion.span
+                            className="block w-6 h-px bg-primary origin-left"
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            transition={{ duration: 1 }}
+                        />
+
+                        Get in touch
+
+                        {/* Right line */}
+                        <motion.span
+                            className="block w-6 h-px bg-primary origin-right"
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            transition={{ duration: 1, delay: 0.2 }}
+                        />
+                    </span>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
               Contact <span className="primary-text">Us</span>
             </h2>
@@ -174,7 +190,7 @@ const Contact = () => {
           </div>
 
           {/* Map */}
-          <div className="z-30 hidden">
+          <div className="z-30 mt-8 hidden">
             <Map center={[51.3566, 0.3082]}>
               <MapTileLayer />
               <MapZoomControl />

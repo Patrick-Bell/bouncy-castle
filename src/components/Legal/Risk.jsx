@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { File } from "lucide-react";
+import { motion } from "framer-motion";
 
 const clauses = [
     {
@@ -189,7 +190,12 @@ const TermsPage = () => {
                 <div className="relative max-w-5xl mx-auto px-8 py-20 flex flex-col gap-6">
                     <div className="flex items-center gap-3">
                     <span className="inline-flex items-center gap-2 text-[#f0f1e8] font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px bg-[#f0f1e8]" />
+                    <motion.span
+                        className="block h-px bg-[#f0f1e8]"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: 24 }} // Tailwind w-6 = 24px
+                        transition={{ duration: 0.4, ease: "easeOut" }}
+                        />
                         Legal
                     </span>
                     </div>
@@ -260,7 +266,7 @@ const TermsPage = () => {
                                 <button
                                     key={id}
                                     onClick={() => scrollTo(id)}
-                                    className={`text-left text-xs px-3 py-2 rounded-lg font-bold transition-all duration-200 flex items-center gap-2.5 group w-full
+                                    className={`cursor-pointer text-left text-xs px-3 py-2 rounded-lg font-bold transition-all duration-200 flex items-center gap-2.5 group w-full
                                         ${isActive
                                             ? "bg-[#3b3e33] text-[#f0f1e8]"
                                             : "text-gray-400 hover:text-[#3b3e33] hover:bg-[#f0f1e8]"

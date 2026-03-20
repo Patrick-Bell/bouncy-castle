@@ -2,6 +2,8 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import Logo from '../../assets/logo.jpg'
 import AboutImg from '../../assets/about.png'
+import { motion } from "framer-motion";
+import { WordRotate } from "../ui/word-rotate";
 
 
 const stats = [
@@ -27,13 +29,20 @@ const AboutUs = () => {
 
                     {/* Eyebrow */}
                     <span className="inline-flex items-center gap-2 primary-text font-bold text-sm tracking-widest uppercase">
-                        <span className="w-6 h-px secondary-bg inline-block" />
+                    <motion.span
+                        className="block h-px secondary-bg"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: 24 }} // Tailwind w-6 = 24px
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        />
                         Our Story
                     </span>
 
                     {/* Heading */}
-                    <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
-                        Fun is a <span className="secondary-text">family</span> business.
+                    <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight flex items-center">
+                        Fun is a 
+                        <span className="secondary-text mx-2"> family</span> 
+                        experience.
                     </h2>
 
                     {/* Body */}
@@ -62,8 +71,8 @@ const AboutUs = () => {
                 </div>
 
                 {/* Right: Image */}
-                <div className="flex-1 w-full">
-                    <div className="relative rounded-3xl overflow-hidden aspect-[5/5]">
+                <div  className="flex-1 w-full">
+                    <div onClick={() => window.open('https://www.instagram.com/haze_events26/', '_blank')}  className="relative rounded-3xl overflow-hidden aspect-[5/5] cursor-pointer">
                         <img
                             src={AboutImg}
                             alt="Children playing on bouncy castle"
