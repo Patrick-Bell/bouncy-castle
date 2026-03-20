@@ -115,7 +115,7 @@ const Navbar = () => {
                     <a
                       key={label}
                       href={href}
-                      className="w-full px-3 py-2.5 rounded-xl text-sm font-semibold text-gray-700 hover:bg-[#f8f9f2] hover:primary-text transition-colors"
+                      className="w-full px-3 py-2.5 rounded-xl text-sm font-semibold text-gray-500 hover:bg-[#f8f9f2] hover:text-gray-800 transition-colors"
                       onClick={() => setMobileOpen(false)}
                     >
                       {label}
